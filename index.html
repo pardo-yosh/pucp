@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aetheris - Plataforma de Cursos</title>
+    <link rel="icon" href="assets/img/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">
+          <i class="ri-cloud-fill"></i>
+          <span>Aetheris</span>
+        </a>
+
+        <button class="header__toggle" id="header-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar__container">
+        <div class="sidebar__user">
+          <div class="sidebar__img">
+            <img
+              src="assets/img/dragon.jpg"
+              alt="Avatar de Zadkiel Pardo Medina"
+            />
+          </div>
+          <div class="sidebar__info">
+            <h3>Zadkiel</h3>
+            <span>Pardo Medina</span>
+          </div>
+        </div>
+
+        <div class="sidebar__content">
+          <div>
+            <h3 class="sidebar__title">CURSOS</h3>
+
+            <div class="sidebar__list">
+              <a href="AUTOMAB/index.html" class="sidebar__link active-link">
+                <i class="ri-robot-2-fill"></i>
+                <span>Automatización B</span>
+              </a>
+
+              <a href="CONTROLB/index.html" class="sidebar__link">
+                <i class="ri-blaze-fill"></i>
+                <span>Control B</span>
+              </a>
+
+              <a href="INGSOS/index.html" class="sidebar__link">
+                <i class="ri-tree-fill"></i>
+                <span>Ingeniería Sostenible</span>
+              </a>
+
+              <a href="PSID/index.html" class="sidebar__link">
+                <i class="ri-base-station-fill"></i>
+                <span>PSID</span>
+              </a>
+
+              <a href="TEMASD/index.html" class="sidebar__link">
+                <i class="ri-cloud-fill"></i>
+                <span>Temas D</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="sidebar__title">AJUSTES</h3>
+
+            <div class="sidebar__list">
+              <a href="settings.html" class="sidebar__link">
+                <i class="ri-settings-3-fill"></i>
+                <span>Ajustes</span>
+              </a>
+
+              <a href="messages.html" class="sidebar__link">
+                <i class="ri-mail-unread-fill"></i>
+                <span>Mis Mensajes</span>
+              </a>
+
+              <a href="notifications.html" class="sidebar__link">
+                <i class="ri-notification-2-fill"></i>
+                <span>Notificaciones</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar__actions">
+          <button>
+            <i
+              class="ri-moon-clear-fill sidebar__link sidebar__theme"
+              id="theme-button"
+              ><span>Tema</span></i
+            >
+          </button>
+
+          <button class="sidebar__link">
+            <i class="ri-logout-box-r-fill"></i>
+            <span>Salir</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+      <div class="dashboard">
+        <h1 class="dashboard__title">Bienvenido a Aetheris</h1>
+        <p class="dashboard__subtitle">
+          Selecciona uno de los cursos para explorar sus recursos:
+        </p>
+
+        <section class="course-grid">
+          <!--=============== AutomaB ===============-->
+          <!--=======================================-->
+          <div class="course-card" data-course="automab">
+            <i class="ri-robot-2-fill course-icon"></i>
+            <h2>Automatización B</h2>
+            <p>Explora los temas y recursos relacionados.</p>
+            <button
+              class="dropdown-btn"
+              aria-expanded="false"
+              aria-controls="automab-menu"
+            >
+              Ver Temas
+            </button>
+            <ul class="dropdown-content" id="automab-menu">
+              <li>
+                <a href="AUTOMAB/tests/tema6-test.html">Tema 6: MES-PSC</a>
+              </li>
+            </ul>
+          </div>
+          <!--=============== ControlB===============-->
+          <!--=======================================-->
+          <div class="course-card" data-course="controlb">
+            <i class="ri-blaze-fill course-icon"></i>
+            <h2>Control B</h2>
+            <p>Accede a los contenidos y herramientas del curso.</p>
+            <button
+              class="dropdown-btn"
+              aria-expanded="false"
+              aria-controls="controlb-menu"
+            >
+              Ver Temas
+            </button>
+            <ul class="dropdown-content" id="controlb-menu">
+              <li><a href="CONTROLB/tema1.html">Tema 1</a></li>
+              <li><a href="CONTROLB/tema2.html">Tema 2</a></li>
+              <li><a href="CONTROLB/tema3.html">Tema 3</a></li>
+            </ul>
+          </div>
+          <!--=============== IngSost ===============-->
+          <!--=======================================-->
+          <div class="course-card" data-course="ingsos">
+            <i class="ri-tree-fill course-icon"></i>
+            <h2>Ingeniería Sostenible</h2>
+            <p>Contenido sobre desarrollo sostenible e ingeniería verde.</p>
+            <button
+              class="dropdown-btn"
+              aria-expanded="false"
+              aria-controls="ingsos-menu"
+            >
+              Ver Temas
+            </button>
+            <ul class="dropdown-content" id="ingsos-menu">
+              <li><a href="INGSOS/tema1.html">Tema 1</a></li>
+              <li><a href="INGSOS/tema2.html">Tema 2</a></li>
+              <li><a href="INGSOS/tests/prueba.html">Control de lectura</a></li>
+            </ul>
+          </div>
+          <!--================= PSID ================-->
+          <!--=======================================-->
+          <div class="course-card" data-course="psid">
+            <i class="ri-base-station-fill course-icon"></i>
+            <h2>PSID</h2>
+            <p>Procesamiento de señales e imágenes digitales.</p>
+            <button
+              class="dropdown-btn"
+              aria-expanded="false"
+              aria-controls="psid-menu"
+            >
+              Ver Temas
+            </button>
+            <ul class="dropdown-content" id="psid-menu">
+              <li>
+                <a href="PSID/test/cap5-test.html"
+                  >Clase 8: Introducción al Procesamiento Digital de Imágenes</a
+                >
+              </li>
+              <li>
+                <a href="PSID/test/clase9.html"
+                  >Clase 9: Mejora de Imágenes en el Dominio Espacial</a
+                >
+              </li>
+              <li>
+                <a href="PSID/test/clase10.html"
+                  >Clase 10: Transformada de Fourier 2D</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--=============== TemasD ================-->
+          <!--=======================================-->
+          <div class="course-card" data-course="temasd">
+            <i class="ri-cloud-fill course-icon"></i>
+            <h2>Temas D</h2>
+            <p>Explora los diversos temas de ingeniería mecatrónica.</p>
+            <button
+              class="dropdown-btn"
+              aria-expanded="false"
+              aria-controls="temasd-menu"
+            >
+              Ver Temas
+            </button>
+            <ul class="dropdown-content" id="temasd-menu">
+              <li><a href="TEMASD/tema1.html">Tema 1</a></li>
+              <li><a href="TEMASD/tema2.html">Tema 2</a></li>
+              <li><a href="TEMASD/tema3.html">Tema 3</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- <script src="assets/js/sidebar-state.js"></script> -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

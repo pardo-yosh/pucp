@@ -1,0 +1,882 @@
+[
+  {
+    "question": "¿Cuál es el objetivo principal del software MES?",
+    "options": [
+      "Mejorar la experiencia del cliente",
+      "Optimizar procesos administrativos",
+      "Gestionar recursos humanos",
+      "Mejorar el proceso de manufactura"
+    ],
+    "answer": "Mejorar el proceso de manufactura",
+    "explanation": "El objetivo principal del software MES es mejorar la eficiencia del proceso de manufactura mediante la ejecución, monitoreo y planeación."
+  },
+  {
+    "question": "¿Qué significa SPC?",
+    "options": [
+      "Sistema de Producción Continua",
+      "Control Estadístico de Procesos",
+      "Servicio de Procesamiento de Calidad",
+      "Sistema de Planeación Corporativa"
+    ],
+    "answer": "Control Estadístico de Procesos",
+    "explanation": "SPC se refiere al Control Estadístico de Procesos, usado para reducir la variabilidad en producción."
+  },
+  {
+    "question": "¿Para qué se usan los gráficos de control en SPC?",
+    "options": [
+      "Para medir la temperatura de máquinas",
+      "Para visualizar tendencias de calidad",
+      "Para calcular costos de producción",
+      "Para registrar datos de entrada"
+    ],
+    "answer": "Para visualizar tendencias de calidad",
+    "explanation": "Los gráficos de control se usan para visualizar tendencias de calidad y detectar desviaciones significativas."
+  },
+  {
+    "question": "¿Qué permite hacer un sistema MES en términos de rastreabilidad?",
+    "options": [
+      "Seguir el movimiento de productos defectuosos",
+      "Detectar fallas en sistemas eléctricos",
+      "Rastrear el origen y movimiento de productos",
+      "Analizar redes sociales"
+    ],
+    "answer": "Rastrear el origen y movimiento de productos",
+    "explanation": "Un sistema MES permite rastrear el origen y el movimiento de productos para garantizar trazabilidad y cumplimiento."
+  },
+  {
+    "question": "¿Qué tipo de manufactura produce ítems individuales como automóviles o aviones?",
+    "options": [
+      "Manufactura continua",
+      "Manufactura discreta",
+      "Manufactura flexible",
+      "Manufactura automatizada"
+    ],
+    "answer": "Manufactura discreta",
+    "explanation": "La manufactura discreta produce ítems individuales y distintos, como automóviles o aviones."
+  },
+  {
+    "question": "¿En qué áreas principales se enfoca el software MES?",
+    "options": [
+      "Diseño, desarrollo y comercialización",
+      "Planeación, ejecución y monitoreo",
+      "Ingeniería, diseño y ventas",
+      "Compras, logística y distribución"
+    ],
+    "answer": "Planeación, ejecución y monitoreo",
+    "explanation": "El software MES se enfoca principalmente en la planeación, ejecución y monitoreo de procesos de manufactura."
+  },
+  {
+    "question": "¿Cuál NO es una funcionalidad típica de un sistema MES?",
+    "options": [
+      "Programación de órdenes de producción",
+      "Gestión de inventario",
+      "Monitoreo de rendimiento",
+      "Control de tráfico web"
+    ],
+    "answer": "Control de tráfico web",
+    "explanation": "El control de tráfico web no es parte de las funcionalidades estándar de un sistema MES."
+  },
+  {
+    "question": "¿Qué herramienta permite identificar causas comunes de defectos?",
+    "options": [
+      "Gráfico de barras",
+      "Diagrama de causa-efecto",
+      "Gráfico circular",
+      "Tabla de frecuencias"
+    ],
+    "answer": "Diagrama de causa-efecto",
+    "explanation": "El diagrama de causa-efecto ayuda a identificar las causas más comunes detrás de defectos recurrentes."
+  },
+  {
+    "question": "¿Qué indica un alto valor de OEE?",
+    "options": [
+      "Baja disponibilidad de personal",
+      "Alta eficiencia del equipo",
+      "Exceso de insumos",
+      "Fallas en la cadena de suministro"
+    ],
+    "answer": "Alta eficiencia del equipo",
+    "explanation": "OEE es un indicador universal que mide la eficiencia del equipo industrial; un alto valor indica buen funcionamiento."
+  },
+  {
+    "question": "¿Qué permite el módulo de Electronic Work Instructions (EWI)?",
+    "options": [
+      "Control de inventarios",
+      "Instrucciones electrónicas para producción",
+      "Monitoreo financiero",
+      "Gestión de proveedores"
+    ],
+    "answer": "Instrucciones electrónicas para producción",
+    "explanation": "El módulo EWI ofrece instrucciones electrónicas que guían a los operadores durante la producción."
+  },
+  {
+    "question": "¿Cuál NO es una ventaja del SPC?",
+    "options": [
+      "Reducir reprocesos",
+      "Disminuir variaciones",
+      "Aumentar desperdicios",
+      "Mejorar la toma de decisiones"
+    ],
+    "answer": "Aumentar desperdicios",
+    "explanation": "SPC busca precisamente lo opuesto: minimizar desperdicios mediante control estadístico."
+  },
+  {
+    "question": "¿Qué es la meta del control estadístico de procesos?",
+    "options": [
+      "Maximizar el costo de producción",
+      "Minimizar el uso de maquinaria",
+      "Reducir la variabilidad del proceso",
+      "Aumentar el número de inspecciones"
+    ],
+    "answer": "Reducir la variabilidad del proceso",
+    "explanation": "El objetivo del SPC es reducir la variabilidad del proceso para mejorar la calidad del producto."
+  },
+  {
+    "question": "¿Qué herramienta ayuda a identificar problemas recurrentes basados en frecuencia?",
+    "options": [
+      "Histograma",
+      "Gráfico de dispersión",
+      "Diagrama de Pareto",
+      "Gráfico de líneas"
+    ],
+    "answer": "Diagrama de Pareto",
+    "explanation": "El Diagrama de Pareto ayuda a priorizar problemas frecuentes y críticos en el proceso de producción."
+  },
+  {
+    "question": "¿Qué representa la línea central en un gráfico de control SPC?",
+    "options": [
+      "El promedio del proceso",
+      "El costo total",
+      "La cantidad de empleados",
+      "La duración de la jornada laboral"
+    ],
+    "answer": "El promedio del proceso",
+    "explanation": "La línea central en un gráfico SPC muestra el promedio del proceso bajo condiciones normales."
+  },
+  {
+    "question": "¿Para qué sirve el análisis de capacidad (CPK) en SPC?",
+    "options": [
+      "Evaluar si el proceso cumple especificaciones del cliente",
+      "Calcular impuestos",
+      "Determinar el salario de empleados",
+      "Registrar inventario"
+    ],
+    "answer": "Evaluar si el proceso cumple especificaciones del cliente",
+    "explanation": "CPK evalúa si un proceso cumple con los requisitos del cliente antes de producir unidades defectuosas."
+  },
+  {
+    "question": "¿Qué es un sistema MES en entornos de baja complejidad/alto volumen?",
+    "options": [
+      "Un sistema contable",
+      "Una herramienta de gestión de calidad",
+      "Una solución para reducir desperdicios",
+      "Un sistema de RR.HH."
+    ],
+    "answer": "Una solución para reducir desperdicios",
+    "explanation": "En entornos de baja complejidad y alto volumen, el MES reduce desperdicios y mejora la planificación."
+  },
+  {
+    "question": "¿Qué tipo de integración facilita un sistema MES?",
+    "options": [
+      "Integración bancaria",
+      "Conexión con ERP y SCADA",
+      "Integración de redes sociales",
+      "Conexión con videojuegos"
+    ],
+    "answer": "Conexión con ERP y SCADA",
+    "explanation": "MES se integra comúnmente con ERP y SCADA para compartir información entre niveles corporativos y de producción."
+  },
+  {
+    "question": "¿Qué herramienta permite analizar correlaciones entre variables?",
+    "options": [
+      "Gráfico de barras",
+      "Diagrama de flujo",
+      "Diagrama de dispersión",
+      "Lista de verificación"
+    ],
+    "answer": "Diagrama de dispersión",
+    "explanation": "El diagrama de dispersión se usa para analizar cómo dos variables están relacionadas entre sí."
+  },
+  {
+    "question": "¿Qué beneficio ofrece la adquisición de datos en tiempo real?",
+    "options": [
+      "Mayor gasto en materiales",
+      "Reducción de la calidad",
+      "Toma de decisiones más rápida",
+      "Menor productividad"
+    ],
+    "answer": "Toma de decisiones más rápida",
+    "explanation": "La adquisición de datos en tiempo real permite reaccionar rápidamente a cambios en el proceso de producción."
+  },
+  {
+    "question": "¿Cuál NO es una característica del software MES?",
+    "options": [
+      "Gestión de herramientas",
+      "Análisis de riesgo financiero",
+      "Adquisición de datos en tiempo real",
+      "Reporte dinámico de KPIs"
+    ],
+    "answer": "Análisis de riesgo financiero",
+    "explanation": "El software MES se centra en la producción, no en análisis financieros."
+  },
+  {
+    "question": "¿Qué herramienta ayuda a registrar y revisar tareas completadas?",
+    "options": [
+      "Hoja de verificación",
+      "Gráfico de Gantt",
+      "Mapa conceptual",
+      "Tabla de multiplicar"
+    ],
+    "answer": "Hoja de verificación",
+    "explanation": "Las hojas de verificación son herramientas simples pero efectivas para registrar actividades completadas."
+  },
+  {
+    "question": "¿Cuál es uno de los fundamentos del SPC?",
+    "options": [
+      "Aumentar el consumo de energía",
+      "Identificar causas comunes y especiales",
+      "Automatizar pagos",
+      "Gestionar redes sociales"
+    ],
+    "answer": "Identificar causas comunes y especiales",
+    "explanation": "SPC se basa en identificar causas comunes y especiales de variación para estabilizar procesos."
+  },
+  {
+    "question": "¿Qué permite hacer la retroalimentación en tiempo real en control de calidad?",
+    "options": [
+      "Mejorar la experiencia de usuario",
+      "Responder rápidamente a problemas",
+      "Reducir horas laborables",
+      "Automatizar compras"
+    ],
+    "answer": "Responder rápidamente a problemas",
+    "explanation": "La retroalimentación en tiempo real permite responder inmediatamente a fallos en el proceso de producción."
+  },
+  {
+    "question": "¿Qué herramienta se usa para evaluar la estabilidad de un proceso?",
+    "options": [
+      "Gráfico de control",
+      "Hoja de cálculo",
+      "Correo electrónico",
+      "Presentación PowerPoint"
+    ],
+    "answer": "Gráfico de control",
+    "explanation": "Los gráficos de control permiten evaluar si un proceso está estable o fuera de control."
+  },
+  {
+    "question": "¿Cuál de las siguientes NO es una herramienta QC7?",
+    "options": [
+      "Gráficos de control",
+      "Diagrama de Ishikawa",
+      "Hoja de verificación",
+      "Software de edición de imágenes"
+    ],
+    "answer": "Software de edición de imágenes",
+    "explanation": "Las herramientas QC7 son específicas para control de calidad, no para edición multimedia."
+  },
+  {
+    "question": "¿Para qué se usan los estudios de capacidad (CPK) en SPC?",
+    "options": [
+      "Para aumentar precios",
+      "Para evaluar cumplimiento de especificaciones",
+      "Para contratar empleados",
+      "Para generar reportes financieros"
+    ],
+    "answer": "Para evaluar cumplimiento de especificaciones",
+    "explanation": "CPK evalúa si un proceso cumple con las tolerancias definidas por el cliente."
+  },
+  {
+    "question": "¿Qué permite hacer la genealogía de órdenes de producción?",
+    "options": [
+      "Seguir el estatus de órdenes",
+      "Organizar eventos sociales",
+      "Controlar redes sociales",
+      "Gestionar publicidad"
+    ],
+    "answer": "Seguir el estatus de órdenes",
+    "explanation": "La genealogía de órdenes permite seguir el estatus de producción desde inicio hasta fin."
+  },
+  {
+    "question": "¿Qué herramienta ayuda a crear informes personalizados en SPC?",
+    "options": [
+      "Hojas de cálculo manuales",
+      "Gráficos prediseñados",
+      "Herramientas de análisis y reporting",
+      "Base de datos de contactos"
+    ],
+    "answer": "Herramientas de análisis y reporting",
+    "explanation": "Las herramientas de análisis avanzado permiten crear informes personalizados según las necesidades del proceso."
+  },
+  {
+    "question": "¿Cuál de los siguientes NO es un tipo de gráfico usado en SPC?",
+    "options": [
+      "Gráfico de Xbar",
+      "Gráfico de control",
+      "Gráfico de torta",
+      "Análisis de Capacidad"
+    ],
+    "answer": "Gráfico de torta",
+    "explanation": "El gráfico de torta no es una herramienta estándar del SPC, ya que no muestra tendencias ni variaciones."
+  },
+  {
+    "question": "¿Cuál es una ventaja del uso de MES en manufactura discreta?",
+    "options": [
+      "Mejorar la planificación de producción",
+      "Reducir el tamaño de equipos",
+      "Aumentar burocracia",
+      "Disminuir la comunicación interna"
+    ],
+    "answer": "Mejorar la planificación de producción",
+    "explanation": "El MES permite una planificación más precisa, especialmente en procesos discretos complejos."
+  },
+  {
+    "question": "¿Qué se mejora al usar SPC en procesos industriales?",
+    "options": [
+      "La satisfacción del cliente",
+      "La variabilidad del proceso",
+      "El diseño de páginas web",
+      "El horario de trabajo"
+    ],
+    "answer": "La variabilidad del proceso",
+    "explanation": "SPC se enfoca en reducir la variabilidad del proceso para asegurar consistencia en la calidad."
+  },
+  {
+    "question": "¿Cuál es el fin último de una solución de calidad de manufactura?",
+    "options": [
+      "Aumentar el número de empleados",
+      "Mejorar la calidad del producto final",
+      "Reducir la producción",
+      "Cambiar ubicaciones"
+    ],
+    "answer": "Mejorar la calidad del producto final",
+    "explanation": "El fin último es ofrecer productos de mayor calidad mediante el control de procesos de fabricación."
+  },
+  {
+    "question": "¿Qué permite la integración de un sistema MES con PLM?",
+    "options": [
+      "Gestionar datos de ciclo de vida del producto",
+      "Hacer llamadas telefónicas",
+      "Ver videos de capacitación",
+      "Enviar correos automáticos"
+    ],
+    "answer": "Gestionar datos de ciclo de vida del producto",
+    "explanation": "La integración con PLM permite gestionar el ciclo de vida del producto dentro del entorno de manufactura."
+  },
+  {
+    "question": "¿Qué tipo de análisis se hace con histogramas en SPC?",
+    "options": [
+      "Análisis de tendencias",
+      "Análisis de capacidades",
+      "Análisis de variaciones",
+      "Análisis de ventas"
+    ],
+    "answer": "Análisis de variaciones",
+    "explanation": "Los histogramas muestran la distribución de los datos y ayudan a entender la variación del proceso."
+  },
+  {
+    "question": "¿Cuál de estos NO es un límite de control en SPC?",
+    "options": [
+      "Límite superior",
+      "Límite inferior",
+      "Límite de utilidad",
+      "Línea central"
+    ],
+    "answer": "Límite de utilidad",
+    "explanation": "Los límites de control en SPC son superior, inferior y central. 'Límite de utilidad' no existe en esta metodología."
+  },
+  {
+    "question": "¿Qué se logra al digitalizar datos de medida en SPC?",
+    "options": [
+      "Mayor lentitud en toma de decisiones",
+      "Mayor precisión en análisis",
+      "Menor visibilidad de procesos",
+      "Menor productividad"
+    ],
+    "answer": "Mayor precisión en análisis",
+    "explanation": "Digitalizar datos permite análisis más precisos y menos intervención manual."
+  },
+  {
+    "question": "¿Qué herramienta permite hacer seguimiento a lotes de producción?",
+    "options": [
+      "Diagrama de flujo",
+      "Sistema de trazabilidad",
+      "Hoja de Excel",
+      "Aplicación de mensajería"
+    ],
+    "answer": "Sistema de trazabilidad",
+    "explanation": "Los sistemas de trazabilidad permiten hacer seguimiento a lotes y sus movimientos dentro de la fábrica."
+  },
+  {
+    "question": "¿Qué permite hacer la integración con OPC UA en un sistema MES?",
+    "options": [
+      "Conectar con PLCs",
+      "Enviar mensajes de texto",
+      "Jugar videos en alta resolución",
+      "Reproducir música"
+    ],
+    "answer": "Conectar con PLCs",
+    "explanation": "OPC UA permite conectarse a dispositivos industriales como PLCs, sensores y máquinas."
+  },
+  {
+    "question": "¿Cuál es una ventaja del SPC en la industria?",
+    "options": [
+      "Mayor tiempo de inactividad",
+      "Reducción de reprocesos",
+      "Mayor número de defectos",
+      "Menor transparencia"
+    ],
+    "answer": "Reducción de reprocesos",
+    "explanation": "SPC ayuda a evitar reprocesos al detectar problemas antes de que generen unidades defectuosas."
+  },
+  {
+    "question": "¿Qué tipo de gráfico muestra la relación entre dos variables?",
+    "options": [
+      "Gráfico de control",
+      "Diagrama de dispersión",
+      "Gráfico de pastel",
+      "Gráfico de líneas"
+    ],
+    "answer": "Diagrama de dispersión",
+    "explanation": "El diagrama de dispersión muestra cómo dos variables están relacionadas entre sí."
+  },
+  {
+    "question": "¿Cuál es una ventaja del uso de firmas electrónicas en MES?",
+    "options": [
+      "Facilitar auditorías y cumplimiento",
+      "Reducir la calidad",
+      "Aumentar retrabajo",
+      "Eliminar registros"
+    ],
+    "answer": "Facilitar auditorías y cumplimiento",
+    "explanation": "Las firmas electrónicas facilitan auditorías y cumplimiento regulatorio al mantener registros digitales."
+  },
+  {
+    "question": "¿Cuál es el propósito de un sistema MES en la toma de decisiones?",
+    "options": [
+      "Dar datos en tiempo real",
+      "Reducir la productividad",
+      "Ocultar información",
+      "Limitar el acceso a datos"
+    ],
+    "answer": "Dar datos en tiempo real",
+    "explanation": "MES proporciona datos en tiempo real para apoyar la toma de decisiones ágil y bien informada."
+  },
+  {
+    "question": "¿Qué permite hacer la integración MES con historiadores industriales?",
+    "options": [
+      "Conectar con bases de datos SQL",
+      "Revisar redes sociales",
+      "Leer libros digitales",
+      "Gestionar archivos PDF"
+    ],
+    "answer": "Conectar con bases de datos SQL",
+    "explanation": "La integración con historiadores industriales permite conectar con bases de datos SQL y almacenar datos históricos."
+  },
+  {
+    "question": "¿Qué tipo de análisis permite hacer el software MES en tiempo real?",
+    "options": [
+      "Análisis de mercado",
+      "Análisis de tendencias de calidad",
+      "Análisis de tráfico web",
+      "Análisis de redes sociales"
+    ],
+    "answer": "Análisis de tendencias de calidad",
+    "explanation": "El MES permite hacer análisis en tiempo real de tendencias de calidad para prevenir errores."
+  },
+  {
+    "question": "¿Qué se busca al establecer reglas de alarma en SPC?",
+    "options": [
+      "Reducir la calidad",
+      "Detectar problemas temprano",
+      "Aumentar tiempos muertos",
+      "Minimizar el uso de tecnología"
+    ],
+    "answer": "Detectar problemas temprano",
+    "explanation": "Las alarmas en SPC permiten detectar problemas tempranos antes de que afecten la producción."
+  },
+  {
+    "question": "¿Qué se mejora con el uso de sistemas MES en manufactura?",
+    "options": [
+      "La calidad del producto",
+      "La seguridad social",
+      "La velocidad de internet",
+      "El diseño de oficinas"
+    ],
+    "answer": "La calidad del producto",
+    "explanation": "MES mejora la calidad del producto mediante monitoreo constante y ajustes en tiempo real."
+  },
+  {
+    "question": "¿Cuál de las siguientes NO es una herramienta de SPC?",
+    "options": [
+      "Gráfico de control",
+      "Diagrama de flujo",
+      "Hoja de verificación",
+      "Gráfico de Pareto"
+    ],
+    "answer": "Diagrama de flujo",
+    "explanation": "El diagrama de flujo no forma parte de las herramientas estándar del SPC."
+  },
+  {
+    "question": "¿Cuál es una ventaja del SPC en la industria?",
+    "options": [
+      "Mayor número de empleados",
+      "Mejora en la toma de decisiones",
+      "Mayor tiempo de inactividad",
+      "Menores estándares de calidad"
+    ],
+    "answer": "Mejora en la toma de decisiones",
+    "explanation": "SPC mejora la toma de decisiones al mostrar tendencias y alertar sobre desviaciones."
+  },
+  {
+    "question": "¿Qué permite la gestión de herramientas en un sistema MES?",
+    "options": [
+      "Aumentar fallos mecánicos",
+      "Controlar su disponibilidad",
+      "Reducir salarios",
+      "Gestionar solo documentos"
+    ],
+    "answer": "Controlar su disponibilidad",
+    "explanation": "La gestión de herramientas permite controlar su estado y disponibilidad en tiempo real."
+  },
+  {
+    "question": "¿Qué tipo de análisis se hace con gráficos de tendencia en SPC?",
+    "options": [
+      "Análisis de comportamiento a largo plazo",
+      "Análisis de ventas diarias",
+      "Análisis de tráfico web",
+      "Análisis de redes sociales"
+    ],
+    "answer": "Análisis de comportamiento a largo plazo",
+    "explanation": "Los gráficos de tendencia muestran cómo se comporta un proceso a lo largo del tiempo."
+  },
+  {
+    "question": "¿Qué se puede evitar con el uso de alarmas en sistemas MES?",
+    "options": [
+      "Problemas en la producción",
+      "Errores en correos",
+      "Caídas de red",
+      "Faltas de personal"
+    ],
+    "answer": "Problemas en la producción",
+    "explanation": "Las alarmas en sistemas MES previenen problemas en la producción mediante notificaciones proactivas."
+  },
+  {
+    "question": "¿Qué se busca al implementar acciones correctivas en SPC?",
+    "options": [
+      "Evitar errores futuros",
+      "Aumentar la rotación de personal",
+      "Eliminar registros",
+      "Reducir la calidad"
+    ],
+    "answer": "Evitar errores futuros",
+    "explanation": "Las acciones correctivas buscan resolver problemas antes de que ocurran errores adicionales en el proceso."
+  },
+  {
+    "question": "¿Cuál NO es una función del SPC?",
+    "options": [
+      "Detectar desviaciones significativas",
+      "Realizar análisis estadístico",
+      "Reducir el tamaño de equipos",
+      "Establecer límites de control"
+    ],
+    "answer": "Reducir el tamaño de equipos",
+    "explanation": "SPC no influye en el tamaño físico de los equipos, sino en la variación del proceso."
+  },
+  {
+    "question": "¿Qué tipo de datos recolecta un sistema MES?",
+    "options": [
+      "Datos históricos de clientes",
+      "Datos operativos del piso de producción",
+      "Datos de encuestas de clima laboral",
+      "Datos de redes sociales"
+    ],
+    "answer": "Datos operativos del piso de producción",
+    "explanation": "El sistema MES recolecta datos operativos clave del piso de producción."
+  },
+  {
+    "question": "¿Qué permite hacer la integración MES + ERP?",
+    "options": [
+      "Acceder a datos de producción en tiempo real",
+      "Mejorar la gestión de correo electrónico",
+      "Ver películas en streaming",
+      "Gestionar solo inventario físico"
+    ],
+    "answer": "Acceder a datos de producción en tiempo real",
+    "explanation": "La integración MES + ERP permite acceder a datos operativos en tiempo real desde la planta de producción."
+  },
+  {
+    "question": "¿Cuál NO es un componente del sistema MES?",
+    "options": [
+      "Gestión de calidad",
+      "Gestión de recursos humanos",
+      "Control de procesos",
+      "Monitoreo de producción"
+    ],
+    "answer": "Gestión de recursos humanos",
+    "explanation": "La gestión de recursos humanos no suele ser una funcionalidad del software MES."
+  },
+  {
+    "question": "¿Qué permite la adquisición de datos en tiempo real?",
+    "options": [
+      "Mayor gasto en materiales",
+      "Mayor precisión en análisis",
+      "Menor visibilidad de procesos",
+      "Menor productividad"
+    ],
+    "answer": "Mayor precisión en análisis",
+    "explanation": "La adquisición de datos en tiempo real permite análisis más precisos y respuesta inmediata."
+  },
+  {
+    "question": "¿Qué se logra al usar SPC en la fabricación de productos?",
+    "options": [
+      "Aumentar desperdicio",
+      "Reducir defectos",
+      "Minimizar la calidad",
+      "Aumentar reprocesos"
+    ],
+    "answer": "Reducir defectos",
+    "explanation": "SPC ayuda a reducir la cantidad de unidades defectuosas mediante análisis predictivo."
+  },
+  {
+    "question": "¿Cuál de los siguientes NO es un tipo de gráfico usado en SPC?",
+    "options": [
+      "Gráfico de control",
+      "Diagrama de flujo",
+      "Hoja de verificación",
+      "Gráfico de barras"
+    ],
+    "answer": "Gráfico de barras",
+    "explanation": "El gráfico de barras no es común en SPC, ya que no muestra tendencias de variación."
+  },
+  {
+    "question": "¿Qué permite hacer un sistema MES en relación a la disponibilidad de materiales?",
+    "options": [
+      "Visualizarla y entenderla",
+      "Ocultarla",
+      "Eliminarla",
+      "Exportarla a PDF"
+    ],
+    "answer": "Visualizarla y entenderla",
+    "explanation": "MES permite visualizar la disponibilidad de materiales para optimizar la producción."
+  },
+  {
+    "question": "¿Qué tipo de integración facilita un sistema MES?",
+    "options": [
+      "Integración bancaria",
+      "Conexión con ERP y SCADA",
+      "Conexión con redes sociales",
+      "Integración de videojuegos"
+    ],
+    "answer": "Conexión con ERP y SCADA",
+    "explanation": "MES facilita la integración con ERP y SCADA para intercambio de datos entre niveles corporativos y operativos."
+  },
+  {
+    "question": "¿Qué herramienta ayuda a identificar patrones en datos de calidad?",
+    "options": [
+      "Gráfico de control",
+      "Hoja de Excel",
+      "Documento Word",
+      "Video tutorial"
+    ],
+    "answer": "Gráfico de control",
+    "explanation": "El gráfico de control es una herramienta fundamental para identificar patrones y tendencias en calidad."
+  },
+  {
+    "question": "¿Cuál es el fin último de una solución de calidad de manufactura?",
+    "options": [
+      "Aumentar el número de empleados",
+      "Mejorar la calidad del producto final",
+      "Reducir la producción",
+      "Cambiar ubicaciones"
+    ],
+    "answer": "Mejorar la calidad del producto final",
+    "explanation": "La calidad de manufactura busca mejorar el producto final mediante monitoreo y control de procesos."
+  },
+  {
+    "question": "¿Qué permite hacer la integración con servidores OPC en un sistema MES?",
+    "options": [
+      "Conectar con sensores y PLCs",
+      "Enviar correos masivos",
+      "Hacer llamadas VoIP",
+      "Gestionar redes sociales"
+    ],
+    "answer": "Conectar con sensores y PLCs",
+    "explanation": "La integración con OPC permite conectar con sensores y PLCs en tiempo real."
+  },
+  {
+    "question": "¿Cuál NO es una ventaja del SPC?",
+    "options": [
+      "Reducción de unidades defectuosas",
+      "Disminución de variaciones",
+      "Aumento de desperdicios",
+      "Cumplimiento regulatorio"
+    ],
+    "answer": "Aumento de desperdicios",
+    "explanation": "SPC busca precisamente reducir desperdicios, no aumentarlos."
+  },
+  {
+    "question": "¿Qué permite la gestión de recetas en sistemas MES?",
+    "options": [
+      "Crear recetas de comida",
+      "Administrar configuraciones de producto",
+      "Vender productos online",
+      "Enviar correos masivos"
+    ],
+    "answer": "Administrar configuraciones de producto",
+    "explanation": "La gestión de recetas en MES se refiere a configuraciones de producto, no a recetas culinarias."
+  },
+  {
+    "question": "¿Cuál es una ventaja del SPC en la industria?",
+    "options": [
+      "Mayor número de empleados",
+      "Reducción de defectos",
+      "Mayor tiempo de inactividad",
+      "Menor transparencia"
+    ],
+    "answer": "Reducción de defectos",
+    "explanation": "SPC ayuda a disminuir los defectos mediante detección anticipada de desviaciones."
+  },
+  {
+    "question": "¿Qué permite hacer la integración MES con PLM?",
+    "options": [
+      "Gestionar datos de ciclo de vida del producto",
+      "Hacer llamadas telefónicas",
+      "Ver videos de capacitación",
+      "Gestionar correo electrónico"
+    ],
+    "answer": "Gestionar datos de ciclo de vida del producto",
+    "explanation": "PLM y MES juntos permiten manejar el ciclo de vida del producto desde diseño hasta producción."
+  },
+  {
+    "question": "¿Qué permite hacer la retroalimentación en tiempo real en control de calidad?",
+    "options": [
+      "Mejorar la experiencia de usuario",
+      "Responder rápidamente a problemas",
+      "Reducir horas laborables",
+      "Automatizar compras"
+    ],
+    "answer": "Responder rápidamente a problemas",
+    "explanation": "La retroalimentación en tiempo real permite tomar medidas inmediatas ante problemas detectados."
+  },
+  {
+    "question": "¿Qué se mejora al usar SPC en procesos industriales?",
+    "options": [
+      "La satisfacción del cliente",
+      "La variabilidad del proceso",
+      "El diseño de páginas web",
+      "El horario de trabajo"
+    ],
+    "answer": "La variabilidad del proceso",
+    "explanation": "SPC se enfoca en minimizar la variabilidad del proceso para mejorar la calidad y eficiencia."
+  },
+  {
+    "question": "¿Qué se busca al usar SPC en la fabricación de productos?",
+    "options": [
+      "Aumentar desperdicio",
+      "Reducir defectos",
+      "Minimizar la calidad",
+      "Aumentar reprocesos"
+    ],
+    "answer": "Reducir defectos",
+    "explanation": "SPC busca reducir la cantidad de unidades defectuosas producidas."
+  },
+  {
+    "question": "¿Qué herramienta ayuda a crear informes dinámicos de MES, como OEE, seguimiento del tiempo de inactividad, gestión de producción, etc.?",
+    "options": [
+      "Hoja de Excel",
+      "Gráficos de control",
+      "Herramientas de análisis y reporting",
+      "Documentos Word"
+    ],
+    "answer": "Herramientas de análisis y reporting",
+    "explanation": "Las herramientas de análisis y reporting permiten crear informes dinámicos y útiles para la toma de decisiones."
+  },
+  {
+    "question": "¿Qué indica el OEE?",
+    "options": [
+      "ERP",
+      "PLM",
+      "SCADA",
+      "Indicador universal de productividad de equipos"
+    ],
+    "answer": "Indicador universal de productividad de equipos",
+    "explanation": "OEE es el indicador universal para medir la eficiencia general de los equipos industriales."
+  },
+  {
+    "question": "¿Qué se busca cuando se implementan herramientas de SPC en producción?",
+    "options": [
+      "Aumentar el desperdicio",
+      "Reducir reprocesos",
+      "Aumentar el número de defectos",
+      "Disminuir la transparencia"
+    ],
+    "answer": "Reducir reprocesos",
+    "explanation": "SPC se enfoca en reducir reprocesos mediante el control estadístico de procesos."
+  },
+  {
+    "question": "¿Cuál de estas NO es una característica del software MES?",
+    "options": [
+      "Gestión de calidad",
+      "Gestión de recursos humanos",
+      "Control de procesos",
+      "Monitoreo de producción"
+    ],
+    "answer": "Gestión de recursos humanos",
+    "explanation": "La gestión de recursos humanos no es una característica habitual del software MES."
+  },
+  {
+    "question": "¿Qué herramienta se usa para evaluar la estabilidad de un proceso?",
+    "options": [
+      "Gráfico de control",
+      "Hoja de Excel",
+      "Correo electrónico",
+      "Presentación PowerPoint"
+    ],
+    "answer": "Gráfico de control",
+    "explanation": "Los gráficos de control son la herramienta más utilizada para evaluar la estabilidad de un proceso."
+  },
+  {
+    "question": "¿Cuál de los siguientes NO es un tipo de gráfico usado en SPC?",
+    "options": [
+      "Gráfico de control",
+      "Diagrama de flujo",
+      "Gráfico de dispersión",
+      "Análisis de Capacidad"
+    ],
+    "answer": "Gráfico de flujo",
+    "explanation": "El gráfico de flujo no forma parte del conjunto de herramientas estándar de SPC."
+  },
+  {
+    "question": "¿Cuál es una ventaja del SPC en la industria?",
+    "options": [
+      "Mayor número de empleados",
+      "Reducción de unidades defectuosas",
+      "Mayor tiempo de inactividad",
+      "Menores estándares de calidad"
+    ],
+    "answer": "Reducción de unidades defectuosas",
+    "explanation": "SPC ayuda a disminuir la cantidad de unidades defectuosas producidas."
+  },
+  {
+    "question": "¿Qué tipo de análisis permite hacer el software SPC?",
+    "options": [
+      "Análisis de mercado",
+      "Análisis de tendencias de calidad",
+      "Análisis de tráfico web",
+      "Análisis de redes sociales"
+    ],
+    "answer": "Análisis de tendencias de calidad",
+    "explanation": "El SPC permite hacer análisis de tendencias de calidad para mejorar continuamente los procesos."
+  },
+  {
+    "question": "¿Cuál NO es una funcionalidad típica de un sistema MES?",
+    "options": [
+      "Programación de órdenes de producción",
+      "Gestión de inventario",
+      "Monitoreo de rendimiento",
+      "Control de tráfico web"
+    ],
+    "answer": "Control de tráfico web",
+    "explanation": "El control de tráfico web no es una funcionalidad del software MES."
+  }
+]

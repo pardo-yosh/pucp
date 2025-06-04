@@ -1,0 +1,212 @@
+[
+  {
+    "question": "¿Cuál es la condición necesaria para que un sistema LTI sea espectralmente estable?",
+    "options": [
+      "Todos los autovalores de A tienen partes reales positivas",
+      "Todos los autovalores de A tienen partes reales negativas o cero",
+      "Al menos un autovalor tiene parte real positiva",
+      "Los autovalores son complejos conjugados"
+    ],
+    "answer": "Todos los autovalores de A tienen partes reales negativas o cero",
+    "explanation": "La estabilidad espectral se define cuando todos los autovalores de la matriz $A$ tienen partes reales negativas o iguales a cero."
+  },
+  {
+    "question": "¿Qué tipo de estabilidad implica que todas las soluciones están acotadas para todo tiempo $t ≥ 0$?",
+    "options": [
+      "Estabilidad espectral",
+      "Estabilidad lineal",
+      "Estabilidad asintótica",
+      "Estabilidad marginal"
+    ],
+    "answer": "Estabilidad lineal",
+    "explanation": "La estabilidad lineal se define como el caso en el cual todas las soluciones del sistema están acotadas para todo $t ≥ 0$."
+  },
+  {
+    "question": "¿Qué tipo de estabilidad implica que todas las soluciones tienden a cero cuando $t → ∞$?",
+    "options": [
+      "Estabilidad espectral",
+      "Estabilidad lineal",
+      "Estabilidad asintótica",
+      "Estabilidad marginal"
+    ],
+    "answer": "Estabilidad asintótica",
+    "explanation": "La estabilidad asintótica se cumple cuando todas las soluciones del sistema tienden a cero conforme $t → ∞$."
+  },
+  {
+    "question": "En un sistema de primer orden $\\dot{x} = ax$, ¿cuándo es lineal y asintóticamente estable?",
+    "options": ["$a = 0$", "$a > 0$", "$a < 0$", "$a$ es complejo"],
+    "answer": "$a < 0$",
+    "explanation": "Si $a < 0$, entonces la solución $x(t) = x_0 e^{at}$ tiende a cero cuando $t → ∞$, lo que implica estabilidad lineal y asintótica."
+  },
+  {
+    "question": "¿Cuál es la ecuación característica del sistema $\\ddot{x} + 4x = 0$?",
+    "options": ["$s^2 + 4 = 0$", "$s^2 - 4 = 0$", "$s + 4 = 0$", "$s - 4 = 0$"],
+    "answer": "$s^2 + 4 = 0$",
+    "explanation": "Para encontrar los autovalores del sistema, se resuelve la ecuación característica $s^2 + 4 = 0$."
+  },
+  {
+    "question": "¿Qué tipo de estabilidad presenta el sistema con autovalores $s_1 = 2i$ y $s_2 = -2i$?",
+    "options": [
+      "Estabilidad asintótica",
+      "Estabilidad espectral",
+      "Inestable",
+      "Marginalmente estable"
+    ],
+    "answer": "Estabilidad espectral",
+    "explanation": "Dado que los autovalores tienen parte real igual a cero, el sistema es espectralmente estable pero no asintóticamente estable."
+  },
+  {
+    "question": "¿Qué tipo de estabilidad se evalúa sin considerar las entradas externas?",
+    "options": [
+      "Estabilidad BIBO",
+      "Estabilidad interna",
+      "Estabilidad exponencial",
+      "Estabilidad Lyapunov"
+    ],
+    "answer": "Estabilidad interna",
+    "explanation": "La estabilidad interna solo considera cómo se comporta el sistema por sí mismo, sin influencia de entradas externas."
+  },
+  {
+    "question": "¿Qué tipo de estabilidad garantiza que una trayectoria permanezca cerca del punto de equilibrio si no comienza demasiado lejos de él?",
+    "options": [
+      "Estabilidad asintótica",
+      "Estabilidad Lyapunov",
+      "Estabilidad exponencial",
+      "Estabilidad marginal"
+    ],
+    "answer": "Estabilidad Lyapunov",
+    "explanation": "La estabilidad de Lyapunov implica que una trayectoria permanece arbitrariamente cerca del punto de equilibrio si no comienza demasiado lejos de él."
+  },
+  {
+    "question": "¿Cuándo un punto de equilibrio se considera marginalmente estable?",
+    "options": [
+      "Es Lyapunov estable y también asintóticamente estable",
+      "No es Lyapunov estable ni asintóticamente estable",
+      "Es Lyapunov estable pero no asintóticamente estable",
+      "Es asintóticamente estable pero no Lyapunov estable"
+    ],
+    "answer": "Es Lyapunov estable pero no asintóticamente estable",
+    "explanation": "Un punto de equilibrio es marginalmente estable si cumple con la estabilidad de Lyapunov pero no con la estabilidad asintótica."
+  },
+  {
+    "question": "¿Qué teorema establece condiciones suficientes para demostrar estabilidad de un punto de equilibrio usando una función $V(x)$?",
+    "options": [
+      "Teorema de Rouché-Hurwitz",
+      "Teorema de Lyapunov",
+      "Teorema de LaSalle",
+      "Teorema de Poincaré-Bendixson"
+    ],
+    "answer": "Teorema de Lyapunov",
+    "explanation": "El Teorema de Lyapunov permite determinar la estabilidad de un punto de equilibrio mediante el uso de una función escalar $V(x)$ que cumpla ciertas propiedades."
+  },
+  {
+    "question": "¿Qué condición debe cumplir una matriz $P$ para ser definida positiva?",
+    "options": [
+      "Tiene todos sus elementos positivos",
+      "Tiene al menos un elemento negativo",
+      "Tiene todos sus autovalores positivos",
+      "Tiene todos sus autovalores negativos"
+    ],
+    "answer": "Tiene todos sus autovalores positivos",
+    "explanation": "Una matriz es definida positiva si y solo si todos sus autovalores son positivos."
+  },
+  {
+    "question": "¿Qué ecuación se utiliza para verificar la estabilidad asintótica en sistemas LTI basada en el método de Lyapunov?",
+    "options": [
+      "$A^TP + PA = -Q$",
+      "$A^TP - PA = Q$",
+      "$AP + PA^T = Q$",
+      "$AP - PA^T = -Q$"
+    ],
+    "answer": "$A^TP + PA = -Q$",
+    "explanation": "La ecuación de Lyapunov para verificar estabilidad asintótica en sistemas LTI es $A^TP + PA = -Q$, donde $Q$ es definida positiva."
+  },
+  {
+    "question": "¿Cuál es la forma general de la ecuación característica de un sistema de segundo orden?",
+    "options": [
+      "$s + a = 0$",
+      "$s^3 + as^2 + bs + c = 0$",
+      "$s^2 + as + b = 0$",
+      "$s^2 - as + b = 0$"
+    ],
+    "answer": "$s^2 + as + b = 0$",
+    "explanation": "La ecuación característica de un sistema de segundo orden típicamente toma la forma $s^2 + as + b = 0$."
+  },
+  {
+    "question": "¿Qué indica la estabilidad BIBO sobre un sistema?",
+    "options": [
+      "Que las salidas están acotadas si las entradas están acotadas",
+      "Que el estado del sistema tiende a cero",
+      "Que el sistema es completamente controlable",
+      "Que el sistema tiene autovalores negativos"
+    ],
+    "answer": "Que las salidas están acotadas si las entradas están acotadas",
+    "explanation": "La estabilidad BIBO (Bounded Input Bounded Output) implica que cualquier entrada acotada produce una salida acotada."
+  },
+  {
+    "question": "¿Cuál es la relación entre estabilidad interna y estabilidad BIBO en sistemas lineales?",
+    "options": [
+      "Son siempre equivalentes",
+      "La estabilidad interna implica BIBO",
+      "BIBO implica estabilidad interna",
+      "No hay relación"
+    ],
+    "answer": "La estabilidad interna implica BIBO",
+    "explanation": "En sistemas lineales, la estabilidad interna (asintótica) implica estabilidad BIBO, aunque el inverso no siempre es cierto."
+  },
+  {
+    "question": "¿Cuál es la definición de un punto de equilibrio en un sistema dinámico?",
+    "options": [
+      "Un punto donde la derivada del estado es distinta de cero",
+      "Un punto donde la derivada del estado es cero",
+      "Un punto donde la entrada es constante",
+      "Un punto donde la salida es máxima"
+    ],
+    "answer": "Un punto donde la derivada del estado es cero",
+    "explanation": "Un punto de equilibrio en un sistema dinámico es aquel en el que la derivada del estado es cero, es decir, $f(x^*) = 0$."
+  },
+  {
+    "question": "¿Qué representa la matriz de controlabilidad $M_c$?",
+    "options": [
+      "La observabilidad de un sistema",
+      "La relación entre entrada y salida",
+      "La capacidad de llevar el sistema de un estado a otro",
+      "La estabilidad interna del sistema"
+    ],
+    "answer": "La capacidad de llevar el sistema de un estado a otro",
+    "explanation": "La matriz de controlabilidad $M_c$ se usa para determinar si un sistema puede ser llevado de un estado inicial a cualquier estado final en un tiempo finito."
+  },
+  {
+    "question": "¿Cuál es la condición para que un sistema sea completamente controlable?",
+    "options": [
+      "Que la matriz de controlabilidad tenga rango menor a $n$",
+      "Que la matriz de controlabilidad tenga rango igual a $n$",
+      "Que la matriz de observabilidad tenga rango igual a $n$",
+      "Que la matriz de controlabilidad sea singular"
+    ],
+    "answer": "Que la matriz de controlabilidad tenga rango igual a $n$",
+    "explanation": "Un sistema es completamente controlable si y solo si la matriz de controlabilidad tiene rango $n$, donde $n$ es el número de estados."
+  },
+  {
+    "question": "¿Qué significa que un sistema sea completamente observable?",
+    "options": [
+      "Se pueden medir todas las entradas",
+      "Se pueden estimar todos los estados a partir de las salidas",
+      "Se pueden predecir todas las salidas",
+      "Se pueden controlar todos los estados"
+    ],
+    "answer": "Se pueden estimar todos los estados a partir de las salidas",
+    "explanation": "Un sistema es completamente observable si se pueden determinar todos los estados del sistema a partir de la observación de las salidas durante un intervalo de tiempo finito."
+  },
+  {
+    "question": "¿Cuál es la estructura de la matriz de observabilidad $M_o$?",
+    "options": [
+      "$M_o = [C \\quad CA \\quad CA^2 \\dots CA^{n-1}]$",
+      "$M_o = [C; CA; CA^2; \\dots; CA^{n-1}]$",
+      "$M_o = [C \\quad A; CA \\quad A^2]$",
+      "$M_o = [CA \\quad CAB \\dots CAnB]$"
+    ],
+    "answer": "$M_o = [C; CA; CA^2; \\dots; CA^{n-1}]$",
+    "explanation": "La matriz de observabilidad $M_o$ está formada por filas que corresponden a $C, CA, CA^2, ..., CA^{n-1}$ apiladas verticalmente."
+  }
+]

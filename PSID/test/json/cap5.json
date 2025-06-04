@@ -1,0 +1,314 @@
+[
+  {
+    "question": "¿Cuál es la fórmula para calcular la reflectancia (ρ) de una superficie?",
+    "options": [
+      "\\( \\rho = \\frac{\\Phi_r}{\\Phi_i} \\)",
+      "\\( \\rho = \\frac{\\Phi_t}{\\Phi_i} \\)",
+      "\\( \\rho = \\frac{\\Phi_a}{\\Phi_i} \\)",
+      "\\( \\rho = \\frac{\\Phi_e}{\\Phi_i} \\)"
+    ],
+    "answer": "\\( \\rho = \\frac{\\Phi_r}{\\Phi_i} \\)",
+    "explanation": "La reflectancia es el cociente entre el flujo luminoso reflejado y el flujo luminoso incidente."
+  },
+  {
+    "question": "¿Cuál es la fórmula correcta para la emisividad espectral de un cuerpo negro según la ley de Planck?",
+    "options": [
+      "\\( E_{\\lambda, T} = \\frac{C_1}{\\lambda^5(e^{\\frac{C_2}{\\lambda T}} - 1)} \\)",
+      "\\( E_{\\lambda, T} = \\frac{C_1}{\\lambda^4(e^{\\frac{C_2}{\\lambda T}} + 1)} \\)",
+      "\\( E_{\\lambda, T} = \\frac{C_1}{\\lambda^3(e^{\\frac{C_2}{\\lambda T}} - 1)} \\)",
+      "\\( E_{\\lambda, T} = \\frac{C_2}{\\lambda^5(e^{\\frac{C_1}{\\lambda T}} - 1)} \\)"
+    ],
+    "answer": "\\( E_{\\lambda, T} = \\frac{C_1}{\\lambda^5(e^{\\frac{C_2}{\\lambda T}} - 1)} \\)",
+    "explanation": "Esta es la fórmula correcta para la potencia espectral emitida por un cuerpo negro según la ley de Planck."
+  },
+  {
+    "question": "¿Qué tipo de onda se caracteriza por compresión y descompresión?",
+    "options": [
+      "Onda transversal",
+      "Onda longitudinal",
+      "Onda electromagnética",
+      "Onda mecánica"
+    ],
+    "answer": "Onda longitudinal",
+    "explanation": "Las ondas longitudinales se caracterizan por vibraciones paralelas a la dirección de propagación, causando compresiones y descompresiones."
+  },
+  {
+    "question": "¿Cuál NO es una forma común de representar una imagen digital?",
+    "options": [
+      "Matriz de dos dimensiones",
+      "Vector de tres dimensiones",
+      "Imagen binaria",
+      "Niveles de gris"
+    ],
+    "answer": "Vector de tres dimensiones",
+    "explanation": "Una imagen digital se representa comúnmente como una matriz bidimensional. El vector de tres dimensiones no es una forma estándar de representación."
+  },
+  {
+    "question": "¿Cuántos colores diferentes pueden representarse en una imagen RGB de 24 bits?",
+    "options": ["256", "65,536", "16,777,216", "4,294,967,296"],
+    "answer": "16,777,216",
+    "explanation": "Con 8 bits por canal (rojo, verde, azul), hay 256 niveles por color, lo que permite 256 × 256 × 256 = 16,777,216 combinaciones posibles."
+  },
+  {
+    "question": "¿Cuál es la distancia euclidiana entre los píxeles (x1, y1) y (x2, y2)?",
+    "options": [
+      "\\( D = |x_1 - x_2| + |y_1 - y_2| \\)",
+      "\\( D = \\max(|x_1 - x_2|, |y_1 - y_2|) \\)",
+      "\\( D = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2} \\)",
+      "\\( D = |x_1 - x_2| \\cdot |y_1 - y_2| \\)"
+    ],
+    "answer": "\\( D = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2} \\)",
+    "explanation": "La distancia euclidiana es la distancia más directa entre dos puntos en el espacio 2D."
+  },
+  {
+    "question": "¿Qué tipo de coordenadas se usan para representar puntos ideales o en el infinito en geometría 2D?",
+    "options": [
+      "Coordenadas cartesianas",
+      "Coordenadas polares",
+      "Coordenadas homogéneas",
+      "Coordenadas paramétricas"
+    ],
+    "answer": "Coordenadas homogéneas",
+    "explanation": "Las coordenadas homogéneas permiten representar puntos en el infinito mediante un tercer componente igual a cero."
+  },
+  {
+    "question": "¿Cuál es la distancia City-Block (D4) entre los píxeles (x1, y1) y (x2, y2)?",
+    "options": [
+      "\\( D = |x_1 - x_2| + |y_1 - y_2| \\)",
+      "\\( D = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2} \\)",
+      "\\( D = \\max(|x_1 - x_2|, |y_1 - y_2|) \\)",
+      "\\( D = |x_1 - x_2| \\cdot |y_1 - y_2| \\)"
+    ],
+    "answer": "\\( D = |x_1 - x_2| + |y_1 - y_2| \\)",
+    "explanation": "La distancia D4 (City-Block) se calcula como la suma de las diferencias absolutas en cada eje."
+  },
+  {
+    "question": "¿Cuál es la distancia Chessboard (D8) entre los píxeles (x1, y1) y (x2, y2)?",
+    "options": [
+      "\\( D = |x_1 - x_2| + |y_1 - y_2| \\)",
+      "\\( D = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2} \\)",
+      "\\( D = \\max(|x_1 - x_2|, |y_1 - y_2|) \\)",
+      "\\( D = |x_1 - x_2| \\cdot |y_1 - y_2| \\)"
+    ],
+    "answer": "\\( D = \\max(|x_1 - x_2|, |y_1 - y_2|) \\)",
+    "explanation": "La distancia D8 (Chessboard) se calcula como el máximo valor absoluto de las diferencias en los ejes x o y."
+  },
+  {
+    "question": "¿Cuál NO es un tipo de adyacencia entre píxeles?",
+    "options": [
+      "Adyacencia-4",
+      "Adyacencia-8",
+      "Adyacencia diagonal",
+      "Adyacencia radial"
+    ],
+    "answer": "Adyacencia radial",
+    "explanation": "La adyacencia radial no es un término usado para describir relaciones espaciales entre píxeles."
+  },
+
+  {
+    "question": "¿Cuál es la fórmula para calcular la transmitancia (τ) de una superficie?",
+    "options": [
+      "\\( \\tau = \\frac{\\Phi_t}{\\Phi_i} \\)",
+      "\\( \\tau = \\frac{\\Phi_r}{\\Phi_i} \\)",
+      "\\( \\tau = \\frac{\\Phi_a}{\\Phi_i} \\)",
+      "\\( \\tau = \\frac{\\Phi_e}{\\Phi_i} \\)"
+    ],
+    "answer": "\\( \\tau = \\frac{\\Phi_t}{\\Phi_i} \\)",
+    "explanation": "La transmitancia es el cociente entre el flujo luminoso transmitido y el flujo luminoso incidente."
+  },
+  {
+    "question": "¿Qué tipo de onda se caracteriza por vibraciones perpendiculares a la dirección de propagación?",
+    "options": [
+      "Onda transversal",
+      "Onda longitudinal",
+      "Onda mecánica",
+      "Onda de choque"
+    ],
+    "answer": "Onda transversal",
+    "explanation": "Las ondas transversales tienen vibraciones perpendiculares a la dirección de propagación, como en cuerdas o luz polarizada."
+  },
+  {
+    "question": "¿Cuántos niveles de gris puede representar una imagen digital de 8 bits por píxel?",
+    "options": ["8", "64", "256", "1024"],
+    "answer": "256",
+    "explanation": "Con 8 bits por píxel, se pueden representar $ 2^8 = 256 $ niveles de intensidad o tonos de gris."
+  },
+  {
+    "question": "¿Cuál NO es un componente principal de un sistema de Procesamiento Digital de Imágenes (PDI)?",
+    "options": [
+      "Cámara digital",
+      "Sistema de adquisición",
+      "Almacenamiento en la nube",
+      "Procesador de imágenes"
+    ],
+    "answer": "Almacenamiento en la nube",
+    "explanation": "Aunque útil, el almacenamiento en la nube no es un componente fundamental en un sistema básico de PDI."
+  },
+  {
+    "question": "¿Cuál es la forma correcta de normalizar un vector de línea ℓ = (a, b, c) en coordenadas homogéneas?",
+    "options": [
+      "\\( \\ell = \\left( \\frac{a}{\\sqrt{a^2 + b^2}}, \\frac{b}{\\sqrt{a^2 + b^2}}, \\frac{c}{\\sqrt{a^2 + b^2}} \\right) \\)",
+      "\\( \\ell = (a, b, c) \\cdot d \\)",
+      "\\( \\ell = (a + b + c, 0, 1) \\)",
+      "\\( \\ell = (a, b, c + d) \\)"
+    ],
+    "answer": "\\( \\ell = \\left( \\frac{a}{\\sqrt{a^2 + b^2}}, \\frac{b}{\\sqrt{a^2 + b^2}}, \\frac{c}{\\sqrt{a^2 + b^2}} \\right) \\)",
+    "explanation": "Para normalizar el vector de línea, se divide cada componente por la norma del vector normal (a, b)."
+  },
+  {
+    "question": "¿Cuál de los siguientes NO corresponde a un estándar de resolución espacial común en imágenes digitales?",
+    "options": ["VGA", "HD", "FHD", "XGA"],
+    "answer": "XGA",
+    "explanation": "Aunque XGA es una resolución, no fue mencionado como parte de los estándares comunes del documento."
+  },
+  {
+    "question": "¿Cuál es la distancia euclidiana entre los puntos (2, 3) y (5, 7)?",
+    "options": [
+      "\\( \\sqrt{(5 - 2)^2 + (7 - 3)^2} = 5 \\)",
+      "\\( |5 - 2| + |7 - 3| = 7 \\)",
+      "\\( \\max(|5 - 2|, |7 - 3|) = 4 \\)",
+      "\\( |5 - 2| \\cdot |7 - 3| = 12 \\)"
+    ],
+    "answer": "\\( \\sqrt{(5 - 2)^2 + (7 - 3)^2} = 5 \\)",
+    "explanation": "La distancia euclidiana se calcula usando el teorema de Pitágoras: $ D = \\sqrt{(Δx)^2 + (Δy)^2} $"
+  },
+  {
+    "question": "¿Cuál es la propiedad matemática que define una métrica de distancia en procesamiento de imágenes?",
+    "options": [
+      "Simetría y positividad",
+      "No negatividad, simetría y desigualdad triangular",
+      "Linealidad y continuidad",
+      "Homogeneidad y convexidad"
+    ],
+    "answer": "No negatividad, simetría y desigualdad triangular",
+    "explanation": "Una métrica debe cumplir tres condiciones: D(p, q) ≥ 0, D(p, q) = D(q, p), y D(p, z) ≤ D(p, q) + D(q, z)."
+  },
+  {
+    "question": "¿Cuál es la fórmula general para la transformación afín 2D en coordenadas homogéneas?",
+    "options": [
+      "\\( x' = sR x + t \\)",
+      "\\( x' = R x + t \\)",
+      "\\( \\tilde{x}' = \\begin{bmatrix} R & t \\\\ 0^T & 1 \\end{bmatrix} \\tilde{x} \\)",
+      "\\( x' = Ax + b \\)"
+    ],
+    "answer": "\\( \\tilde{x}' = \\begin{bmatrix} R & t \\\\ 0^T & 1 \\end{bmatrix} \\tilde{x} \\)",
+    "explanation": "En coordenadas homogéneas, las transformaciones afines se expresan como matrices de 3×3 actuando sobre vectores de 3 componentes."
+  },
+  {
+    "question": "¿Cuál es la condición necesaria para que dos píxeles sean considerados conectados en una región S?",
+    "options": [
+      "Que estén adyacentes diagonalmente",
+      "Que exista un camino dentro de S que los une",
+      "Que compartan el mismo nivel de gris",
+      "Que estén separados por una frontera"
+    ],
+    "answer": "Que exista un camino dentro de S que los une",
+    "explanation": "Dos píxeles están conectados si existe un camino compuesto únicamente por píxeles de S que los une."
+  },
+
+  {
+    "question": "¿Cuál es la fórmula para calcular la absortancia (α) de una superficie?",
+    "options": [
+      "\\( \\alpha = \\frac{\\Phi_a}{\\Phi_i} \\)",
+      "\\( \\alpha = \\frac{\\Phi_t}{\\Phi_i} \\)",
+      "\\( \\alpha = \\frac{\\Phi_r}{\\Phi_i} \\)",
+      "\\( \\alpha = \\frac{\\Phi_e}{\\Phi_i} \\)"
+    ],
+    "answer": "\\( \\alpha = \\frac{\\Phi_a}{\\Phi_i} \\)",
+    "explanation": "La absortancia es el cociente entre el flujo luminoso absorbido y el flujo luminoso incidente."
+  },
+  {
+    "question": "¿Qué tipo de células del ojo humano son responsables de la visión en color?",
+    "options": [
+      "Bastones",
+      "Células ganglionares",
+      "Conos",
+      "Células bipolares"
+    ],
+    "answer": "Conos",
+    "explanation": "Los conos son los fotorreceptores responsables de la percepción del color y funcionan mejor en condiciones de alta iluminación."
+  },
+  {
+    "question": "¿Cuántos tonos de gris se pueden representar con una imagen de 10 bits por píxel?",
+    "options": ["64", "256", "1024", "4096"],
+    "answer": "1024",
+    "explanation": "Una imagen de 10 bits puede representar $ 2^{10} = 1024 $ niveles de intensidad o tonos de gris."
+  },
+  {
+    "question": "¿Cuál NO es un factor que afecta la resolución espacial de una imagen digital?",
+    "options": [
+      "Tamaño del sensor",
+      "Distancia focal",
+      "Profundidad de color",
+      "Calidad del lente"
+    ],
+    "answer": "Profundidad de color",
+    "explanation": "La profundidad de color afecta la cantidad de colores o niveles de gris, no la resolución espacial."
+  },
+  {
+    "question": "¿Cuál es la distancia euclidiana entre los puntos (1, 2) y (4, 6)?",
+    "options": [
+      "\\( \\sqrt{(4 - 1)^2 + (6 - 2)^2} = 5 \\)",
+      "\\( |4 - 1| + |6 - 2| = 7 \\)",
+      "\\( \\max(|4 - 1|, |6 - 2|) = 4 \\)",
+      "\\( |4 - 1| × |6 - 2| = 12 \\)"
+    ],
+    "answer": "\\( \\sqrt{(4 - 1)^2 + (6 - 2)^2} = 5 \\)",
+    "explanation": "La distancia euclidiana se calcula usando el teorema de Pitágoras: $ D = \\sqrt{(Δx)^2 + (Δy)^2} $"
+  },
+  {
+    "question": "¿Cuál es la forma correcta de expresar una rotación pura en coordenadas homogéneas?",
+    "options": [
+      "\\( x' = R x + t \\)",
+      "\\( x' = sR x + t \\)",
+      "\\( \\tilde{x}' = \\begin{bmatrix} R & 0 \\\\ 0^T & 1 \\end{bmatrix} \\tilde{x} \\)",
+      "\\( x' = [I t] \\tilde{x} \\)"
+    ],
+    "answer": "\\( \\tilde{x}' = \\begin{bmatrix} R & 0 \\\\ 0^T & 1 \\end{bmatrix} \\tilde{x} \\)",
+    "explanation": "En coordenadas homogéneas, una rotación pura se representa como una matriz 3×3 sin traslación."
+  },
+  {
+    "question": "¿Cuál es la propiedad que NO debe cumplir una métrica de distancia?",
+    "options": [
+      "Simetría",
+      "Homogeneidad",
+      "No negatividad",
+      "Desigualdad triangular"
+    ],
+    "answer": "Homogeneidad",
+    "explanation": "La homogeneidad no es una propiedad necesaria para una métrica; sí lo son la simetría, la no negatividad y la desigualdad triangular."
+  },
+  {
+    "question": "¿Cuál es la definición de una región en procesamiento de imágenes?",
+    "options": [
+      "Un conjunto de píxeles con el mismo nivel de gris",
+      "Un conjunto conexo de píxeles",
+      "Un grupo de píxeles adyacentes diagonalmente",
+      "Un conjunto de píxeles separados por bordes"
+    ],
+    "answer": "Un conjunto conexo de píxeles",
+    "explanation": "Una región es un subconjunto de píxeles que están conectados entre sí dentro de un camino."
+  },
+  {
+    "question": "¿Cuál es la fórmula general de transformación afín en 2D?",
+    "options": [
+      "\\( x' = R x + t \\)",
+      "\\( x' = sR x + t \\)",
+      "\\( x' = A x + b \\)",
+      "\\( x' = T(x) \\)"
+    ],
+    "answer": "\\( x' = A x + b \\)",
+    "explanation": "La transformación afín general se expresa como una combinación lineal más una traslación."
+  },
+  {
+    "question": "¿Cuál es la fórmula de la distancia D8 (chessboard) entre los puntos (3, 4) y (6, 8)?",
+    "options": [
+      "\\( |6 - 3| + |8 - 4| = 7 \\)",
+      "\\( \\sqrt{(6 - 3)^2 + (8 - 4)^2} = 5 \\)",
+      "\\( \\max(|6 - 3|, |8 - 4|) = 4 \\)",
+      "\\( |6 - 3| × |8 - 4| = 12 \\)"
+    ],
+    "answer": "\\( \\max(|6 - 3|, |8 - 4|) = 4 \\)",
+    "explanation": "La distancia D8 (chessboard) se define como el máximo valor absoluto de las diferencias en cada eje."
+  }
+]
