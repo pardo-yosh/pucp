@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aetheris | Ingeniería Sostenible</title>
+    <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <div class="header__container">
+        <a href="../index.html" class="header__logo">
+          <i class="ri-cloud-fill"></i>
+          <span>Aetheris</span>
+        </a>
+
+        <button class="header__toggle" id="header-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar__container">
+        <div class="sidebar__user">
+          <div class="sidebar__img">
+            <img
+              src="../assets/img/dragon.jpg"
+              alt="Avatar de Zadkiel Pardo Medina"
+            />
+          </div>
+          <div class="sidebar__info">
+            <h3>Zadkiel</h3>
+            <span>Pardo Medina</span>
+          </div>
+        </div>
+
+        <div class="sidebar__content">
+          <div>
+            <h3 class="sidebar__title">CURSOS</h3>
+
+            <div class="sidebar__list">
+              <a href="../automab/index.html" class="sidebar__link active-link">
+                <i class="ri-robot-2-fill"></i>
+                <span>Automatización B</span>
+              </a>
+
+              <a href="../controlb/index.html" class="sidebar__link">
+                <i class="ri-blaze-fill"></i>
+                <span>Control B</span>
+              </a>
+
+              <a href="index.html" class="sidebar__link">
+                <i class="ri-tree-fill"></i>
+                <span>Ingeniería Sostenible</span>
+              </a>
+
+              <a href="../psid/index.html" class="sidebar__link">
+                <i class="ri-base-station-fill"></i>
+                <span>PSID</span>
+              </a>
+
+              <a href="../temasd/index.html" class="sidebar__link">
+                <i class="ri-cloud-fill"></i>
+                <span>Temas D</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="sidebar__title">AJUSTES</h3>
+
+            <div class="sidebar__list">
+              <a href="settings.html" class="sidebar__link">
+                <i class="ri-settings-3-fill"></i>
+                <span>Ajustes</span>
+              </a>
+
+              <a href="messages.html" class="sidebar__link">
+                <i class="ri-mail-unread-fill"></i>
+                <span>Mis Mensajes</span>
+              </a>
+
+              <a href="notifications.html" class="sidebar__link">
+                <i class="ri-notification-2-fill"></i>
+                <span>Notificaciones</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar__actions">
+          <button>
+            <i
+              class="ri-moon-clear-fill sidebar__link sidebar__theme"
+              id="theme-button"
+              ><span>Tema</span></i
+            >
+          </button>
+
+          <button class="sidebar__link">
+            <i class="ri-logout-box-r-fill"></i>
+            <span>Salir</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!--=============== MAIN ===============-->
+    <main class="main container" id="main">
+      <div class="dashboard">
+        <h1 class="dashboard__title">Bienvenido a Aetheris</h1>
+        <h1 class="dashboard__title">
+          INTRODUCCIÓN A LA INGENIERÍA SOSTENIBLE
+        </h1>
+        <p class="dashboard__subtitle">
+          Selecciona uno de los temas para explorar sus recursos:
+        </p>
+
+        <section class="course-grid">
+          <!--=============== TEMA 6 ===============-->
+          <!--======================================-->
+          <div class="course-card" data-course="automab">
+            <span class="material-symbols-outlined course-icon">
+              precision_manufacturing
+            </span>
+            <h2>Tema 6:</h2>
+            <h2>MES - SPC</h2>
+            <!-- Botón de Test con enlace -->
+            <a href="tests/tema6-test.html" class="action-btn test-btn">
+              <i class="ri-question-line"></i>
+              <span>Test</span>
+            </a>
+            <!-- Botón de Documento con enlace -->
+            <a href="docs/tema6.pdf" class="action-btn doc-btn" target="_blank">
+              <i class="ri-file-text-line"></i>
+              <span>Documento</span>
+            </a>
+          </div>
+          <!--=============== TEMA 7 ===============-->
+          <!--======================================-->
+          <div class="course-card" data-course="automab">
+            <span class="material-symbols-outlined course-icon">
+              menu_book
+            </span>
+            <h2>Control de lectura 2:</h2>
+            <h2>Prueba</h2>
+            <!-- Botón de Test con enlace -->
+            <a href="tests/prueba.html" class="action-btn test-btn">
+              <i class="ri-question-line"></i>
+              <span>Test</span>
+            </a>
+            <!-- Botón de Documento con enlace -->
+            <a
+              href="docs/control/primero.pdf"
+              class="action-btn doc-btn"
+              target="_blank"
+            >
+              <i class="ri-file-text-line"></i>
+              <span>Documento 1</span>
+            </a>
+            <a
+              href="docs/control/segundo.pdf"
+              class="action-btn doc-btn"
+              target="_blank"
+            >
+              <i class="ri-file-text-line"></i>
+              <span>Documento 2</span>
+            </a>
+            <a
+              href="docs/control/tercero.pdf"
+              class="action-btn doc-btn"
+              target="_blank"
+            >
+              <i class="ri-file-text-line"></i>
+              <span>Documento 3</span>
+            </a>
+          </div>
+          <!--=============== TEMA 8 ===============-->
+          <!--======================================-->
+        </section>
+      </div>
+    </main>
+
+    <!--=============== SCRIPT ===============-->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

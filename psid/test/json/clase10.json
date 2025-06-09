@@ -1,0 +1,327 @@
+[
+  {
+    "question": "¿Cuál es la definición de la Transformada Discreta de Fourier (DFT) en una dimensión?",
+    "options": [
+      "$X[k] = \\sum_{n=0}^{N-1} x[n] e^{-j2\\pi kn/N}$",
+      "$x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X[k] e^{j2\\pi kn/N}$",
+      "$X(k) = \\int_{-\\infty}^{\\infty} x(t) e^{-j2\\pi ft} dt$",
+      "$x(n) = \\sum_{k=0}^{N} X(k) e^{j2\\pi kn/N}$"
+    ],
+    "answer": "$X[k] = \\sum_{n=0}^{N-1} x[n] e^{-j2\\pi kn/N}$",
+    "explanation": "La DFT se define como $X[k] = \\sum_{n=0}^{N-1} x[n] e^{-j2\\pi kn/N}$, donde $0 \\leq k \\leq N - 1$."
+  },
+  {
+    "question": "¿Qué tipo de ruido tiene una distribución uniforme de energía y afecta a toda la imagen?",
+    "options": [
+      "Ruido impulsivo",
+      "Ruido blanco o gaussiano",
+      "Ruido coherente",
+      "Ruido aleatorio localizado"
+    ],
+    "answer": "Ruido blanco o gaussiano",
+    "explanation": "El ruido blanco o gaussiano se caracteriza por tener una distribución uniforme de energía y afectar a toda la imagen."
+  },
+  {
+    "question": "¿Cuál NO es un filtro típico aplicado en el dominio frecuencial?",
+    "options": [
+      "Filtro pasabajos",
+      "Filtro pasaaltos",
+      "Filtro de mediana",
+      "Filtro rechaza banda"
+    ],
+    "answer": "Filtro de mediana",
+    "explanation": "El filtro de mediana pertenece al dominio espacial y no es comúnmente utilizado directamente en el dominio frecuencial."
+  },
+  {
+    "question": "¿Cómo se llama el proceso que permite modificar componentes frecuenciales de una imagen?",
+    "options": [
+      "Filtrado espacial",
+      "Convolución",
+      "Transformación en el dominio frecuencial",
+      "Codificación Huffman"
+    ],
+    "answer": "Transformación en el dominio frecuencial",
+    "explanation": "Trabajar en el dominio frecuencial permite modificar directamente las componentes frecuenciales de una imagen."
+  },
+  {
+    "question": "¿Cuál es la fórmula de la Transformada Inversa Discreta de Fourier (IDFT) en una dimensión?",
+    "options": [
+      "$x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X[k] e^{j2\\pi kn/N}$",
+      "$X[k] = \\sum_{n=0}^{N-1} x[n] e^{-j2\\pi kn/N}$",
+      "$x[n] = \\sum_{k=0}^{N-1} X[k] e^{j2\\pi kn/N}$",
+      "$X[k] = \\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j2\\pi kn/N}$"
+    ],
+    "answer": "$x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X[k] e^{j2\\pi kn/N}$",
+    "explanation": "La IDFT se define como $x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X[k] e^{j2\\pi kn/N}$, donde $0 \\leq n \\leq N - 1$."
+  },
+  {
+    "question": "¿Cuál es la propiedad fundamental del teorema de convolución en el dominio frecuencial?",
+    "options": [
+      "La convolución en el espacio equivale a la multiplicación en el dominio frecuencial.",
+      "La derivada en frecuencia equivale a la integral en tiempo.",
+      "La transformada de Fourier es lineal solamente para señales periódicas.",
+      "La convolución en el espacio equivale a la suma en frecuencia."
+    ],
+    "answer": "La convolución en el espacio equivale a la multiplicación en el dominio frecuencial.",
+    "explanation": "Según el teorema de convolución, $G(u,v) = F(u,v) \\cdot H(u,v)$, lo cual indica que la convolución en el dominio espacial equivale a la multiplicación en el dominio frecuencial."
+  },
+  {
+    "question": "¿Cuál es la definición de la Transformada Discreta de Fourier 2D para una imagen de tamaño M×N?",
+    "options": [
+      "$F(u,v) = \\sum_{x=0}^{N-1} \\sum_{y=0}^{M-1} f(x,y) e^{-j2\\pi(ux/N + vy/M)}$",
+      "$f(x,y) = \\frac{1}{NM} \\sum_{u=0}^{N-1} \\sum_{v=0}^{M-1} F(u,v) e^{j2\\pi(ux/N + vy/M)}$",
+      "$F(u,v) = \\int \\int f(x,y) e^{-j2\\pi(ux + vy)} dx dy$",
+      "$f(x,y) = \\sum_{u=0}^{N-1} \\sum_{v=0}^{M-1} F(u,v) e^{j2\\pi(ux/N + vy/M)}$"
+    ],
+    "answer": "$F(u,v) = \\sum_{x=0}^{N-1} \\sum_{y=0}^{M-1} f(x,y) e^{-j2\\pi(ux/N + vy/M)}$",
+    "explanation": "La DFT 2D se define como $F(u,v) = \\sum_{x=0}^{N-1} \\sum_{y=0}^{M-1} f(x,y) e^{-j2\\pi(ux/N + vy/M)}$."
+  },
+  {
+    "question": "¿Cuál de los siguientes NO es un tipo de filtro frecuencial?",
+    "options": [
+      "Pasa bajas ideal",
+      "Pasa altas Butterworth",
+      "Filtro adaptativo",
+      "Rechaza banda Gaussiano"
+    ],
+    "answer": "Filtro adaptativo",
+    "explanation": "Los filtros adaptativos son utilizados principalmente en el dominio espacial, no son comunes en el dominio frecuencial."
+  },
+  {
+    "question": "¿Cuál es la fórmula del filtro Pasa Bajas Ideal?",
+    "options": [
+      "$H(u,v) = 1$ si $D(u,v) > D_0$, de lo contrario $0$",
+      "$H(u,v) = 1$ si $D(u,v) ≤ D_0$, de lo contrario $0$",
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$"
+    ],
+    "answer": "$H(u,v) = 1$ si $D(u,v) ≤ D_0$, de lo contrario $0$",
+    "explanation": "El filtro Pasa Bajas Ideal deja pasar solo las frecuencias menores o iguales a $D_0$."
+  },
+  {
+    "question": "¿Cuál es la fórmula del filtro Pasa Altas Gaussiano?",
+    "options": [
+      "$H(u,v) = e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$",
+      "$H(u,v) = \\frac{1}{1 + [D_0/D(u,v)]^{2n}}$"
+    ],
+    "answer": "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$",
+    "explanation": "El filtro Pasa Altas Gaussiano se define como $H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$, donde se eliminan frecuencias bajas."
+  },
+  {
+    "question": "¿En qué dominio se realiza el filtrado cuando se utiliza la Transformada de Fourier?",
+    "options": [
+      "Dominio temporal",
+      "Dominio espacial",
+      "Dominio frecuencial",
+      "Dominio probabilístico"
+    ],
+    "answer": "Dominio frecuencial",
+    "explanation": "La Transformada de Fourier permite realizar el filtrado en el dominio frecuencial, evitando la convolución directa."
+  },
+  {
+    "question": "¿Qué representa $D(u,v)$ en los filtros frecuenciales?",
+    "options": [
+      "La distancia desde el centro de la imagen",
+      "La frecuencia angular de la señal",
+      "La amplitud de la componente frecuencial",
+      "La fase de la componente compleja"
+    ],
+    "answer": "La distancia desde el centro de la imagen",
+    "explanation": "$D(u,v)$ representa la distancia euclidiana desde el punto $(u,v)$ hasta el centro de la representación frecuencial."
+  },
+  {
+    "question": "¿Cuál es la ventaja principal del filtrado en el dominio frecuencial respecto al espacial?",
+    "options": [
+      "Mayor consumo de recursos computacionales",
+      "Permite trabajar directamente con componentes frecuenciales",
+      "Es más fácil de implementar",
+      "No requiere transformaciones previas"
+    ],
+    "answer": "Permite trabajar directamente con componentes frecuenciales",
+    "explanation": "El filtrado en el dominio frecuencial permite manipular las componentes de frecuencia individuales de manera más precisa."
+  },
+  {
+    "question": "¿Cuál es la fórmula del filtro Rechaza Banda Ideal?",
+    "options": [
+      "$H(u,v) = 1$ si $D(u,v) > D_0$, de lo contrario $0$",
+      "$H(u,v) = 1$ si $D(u,v) ≤ D_0$, de lo contrario $0$",
+      "$H(u,v) = 0$ si $D_0 - W/2 ≤ D(u,v) ≤ D_0 + W/2$, de lo contrario $1$",
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$"
+    ],
+    "answer": "$H(u,v) = 0$ si $D_0 - W/2 ≤ D(u,v) ≤ D_0 + W/2$, de lo contrario $1$",
+    "explanation": "El filtro Rechaza Banda Ideal elimina frecuencias dentro de un ancho de banda determinado por $W$ y $D_0$."
+  },
+  {
+    "question": "¿Cuál es la relación entre la frecuencia espacial y la representación en el dominio frecuencial?",
+    "options": [
+      "Las frecuencias altas corresponden a cambios bruscos en la imagen",
+      "Las frecuencias bajas corresponden a bordes y detalles finos",
+      "Todas las frecuencias son irrelevantes para el análisis de imágenes",
+      "Solo las frecuencias medias son importantes"
+    ],
+    "answer": "Las frecuencias altas corresponden a cambios bruscos en la imagen",
+    "explanation": "En el dominio frecuencial, las frecuencias altas están asociadas a bordes y detalles abruptos en la imagen original."
+  },
+  {
+    "question": "¿Cuál es la fórmula del filtro Pasa Bajas Butterworth?",
+    "options": [
+      "$H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$",
+      "$H(u,v) = \\frac{1}{1 + [D_0/D(u,v)]^{2n}}$",
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = e^{-D^2(u,v)/2D_0^2}$"
+    ],
+    "answer": "$H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$",
+    "explanation": "El filtro Pasa Bajas Butterworth tiene una transición suave y se define como $H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$."
+  },
+  {
+    "question": "¿Cuál es la fórmula del filtro Pasa Altas Butterworth?",
+    "options": [
+      "$H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$",
+      "$H(u,v) = \\frac{1}{1 + [D_0/D(u,v)]^{2n}}$",
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = e^{-D^2(u,v)/2D_0^2}$"
+    ],
+    "answer": "$H(u,v) = \\frac{1}{1 + [D_0/D(u,v)]^{2n}}$",
+    "explanation": "El filtro Pasa Altas Butterworth se define como $H(u,v) = \\frac{1}{1 + [D_0/D(u,v)]^{2n}}$."
+  },
+  {
+    "question": "¿Cuál es la fórmula del filtro Rechaza Banda Gaussiano?",
+    "options": [
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = 1 - e^{-(D^2 - D_0^2)/DW^2}$",
+      "$H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$"
+    ],
+    "answer": "$H(u,v) = 1 - e^{-(D^2 - D_0^2)/DW^2}$",
+    "explanation": "El filtro Rechaza Banda Gaussiano se define como $H(u,v) = 1 - e^{-(D^2 - D_0^2)/DW^2}$, donde se rechazan frecuencias cercanas a $D_0$."
+  },
+  {
+    "question": "¿Cuál es la ventaja del filtro Butterworth sobre el filtro ideal?",
+    "options": [
+      "Menor costo computacional",
+      "Transición más suave entre frecuencias permitidas y bloqueadas",
+      "Mayor precisión en el corte exacto",
+      "Facilidad de implementación"
+    ],
+    "answer": "Transición más suave entre frecuencias permitidas y bloqueadas",
+    "explanation": "A diferencia del filtro ideal, el filtro Butterworth ofrece una transición gradual entre frecuencias permitidas y bloqueadas."
+  },
+  {
+    "question": "¿Qué propiedad permite relacionar la convolución en el dominio espacial con el producto en el dominio frecuencial?",
+    "options": [
+      "Propiedad de simetría",
+      "Teorema de la convolución",
+      "Linealidad",
+      "Invariancia en el tiempo"
+    ],
+    "answer": "Teorema de la convolución",
+    "explanation": "El teorema de la convolución establece que la convolución en el dominio espacial corresponde al producto en el dominio frecuencial."
+  },
+  {
+    "question": "¿Cuál es la forma correcta de calcular $g(x,y)$ usando el filtrado en el dominio frecuencial?",
+    "options": [
+      "$g(x,y) = f(x,y) * h(x,y)$",
+      "$G(u,v) = F(u,v) \\cdot H(u,v)$",
+      "$g(x,y) = \\mathcal{F}^{-1}[F(u,v) \\cdot H(u,v)]$",
+      "$g(x,y) = \\mathcal{F}[f(x,y) \\cdot h(x,y)]$"
+    ],
+    "answer": "$g(x,y) = \\mathcal{F}^{-1}[F(u,v) \\cdot H(u,v)]$",
+    "explanation": "Para obtener la imagen filtrada en el dominio espacial, se aplica la transformada inversa del producto en el dominio frecuencial."
+  },
+  {
+    "question": "¿Qué representa la variable $N$ en la Transformada Discreta de Fourier?",
+    "options": [
+      "La cantidad de muestras en el dominio temporal",
+      "La cantidad de componentes frecuenciales",
+      "El número de filas de la imagen",
+      "El número de columnas de la imagen"
+    ],
+    "answer": "La cantidad de muestras en el dominio temporal",
+    "explanation": "En la DFT, $N$ representa la longitud de la señal discreta en el dominio del tiempo o espacio."
+  },
+  {
+    "question": "¿Cuál es la función de transferencia del filtro Pasa Altas Ideal?",
+    "options": [
+      "$H(u,v) = 1$ si $D(u,v) ≤ D_0$, de lo contrario $0$",
+      "$H(u,v) = 1$ si $D(u,v) > D_0$, de lo contrario $0$",
+      "$H(u,v) = e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$"
+    ],
+    "answer": "$H(u,v) = 1$ si $D(u,v) > D_0$, de lo contrario $0$",
+    "explanation": "El filtro Pasa Altas Ideal deja pasar únicamente las frecuencias mayores a $D_0$."
+  },
+  {
+    "question": "¿Cuál es la relación entre la frecuencia espacial y el número de ciclos por píxel?",
+    "options": ["$f = 1 / M$", "$f = M$", "$f = 2 / M$", "$f = M / 2$"],
+    "answer": "$f = 1 / M$",
+    "explanation": "La frecuencia espacial mínima detectable es $f = 1 / M$, donde $M$ es el ancho de la imagen."
+  },
+  {
+    "question": "¿Cuál es la fórmula de la Transformada Inversa Discreta de Fourier 2D?",
+    "options": [
+      "$f(x,y) = \\frac{1}{NM} \\sum_{u=0}^{N-1} \\sum_{v=0}^{M-1} F(u,v) e^{j2\\pi(ux/N + vy/M)}$",
+      "$F(u,v) = \\sum_{x=0}^{N-1} \\sum_{y=0}^{M-1} f(x,y) e^{-j2\\pi(ux/N + vy/M)}$",
+      "$f(x,y) = \\sum_{u=0}^{N-1} \\sum_{v=0}^{M-1} F(u,v) e^{j2\\pi(ux/N + vy/M)}$",
+      "$F(u,v) = \\frac{1}{NM} \\sum_{x=0}^{N-1} \\sum_{y=0}^{M-1} f(x,y) e^{-j2\\pi(ux/N + vy/M)}$"
+    ],
+    "answer": "$f(x,y) = \\frac{1}{NM} \\sum_{u=0}^{N-1} \\sum_{v=0}^{M-1} F(u,v) e^{j2\\pi(ux/N + vy/M)}$",
+    "explanation": "La Transformada Inversa Discreta de Fourier 2D recupera la imagen original mediante esta fórmula."
+  },
+  {
+    "question": "¿Cuál es la ventaja de usar la Transformada de Fourier en el procesamiento de imágenes?",
+    "options": [
+      "Permite trabajar en escalas de grises",
+      "Facilita la compresión JPEG",
+      "Permite analizar y modificar componentes frecuenciales",
+      "Reduce el tamaño de archivo"
+    ],
+    "answer": "Permite analizar y modificar componentes frecuenciales",
+    "explanation": "La Transformada de Fourier facilita el análisis y modificación de las componentes frecuenciales de una imagen."
+  },
+  {
+    "question": "¿Cuál es la fórmula del filtro Pasa Bajas Gaussiano?",
+    "options": [
+      "$H(u,v) = e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = 1 - e^{-D^2(u,v)/2D_0^2}$",
+      "$H(u,v) = \\frac{1}{1 + [D(u,v)/D_0]^{2n}}$",
+      "$H(u,v) = \\frac{1}{1 + [D_0/D(u,v)]^{2n}}$"
+    ],
+    "answer": "$H(u,v) = e^{-D^2(u,v)/2D_0^2}$",
+    "explanation": "El filtro Pasa Bajas Gaussiano se define como $H(u,v) = e^{-D^2(u,v)/2D_0^2}$, atenuando progresivamente las altas frecuencias."
+  },
+  {
+    "question": "¿Cuál es la ventaja del filtro Gaussiano sobre el filtro ideal?",
+    "options": [
+      "Tiene un corte perfecto",
+      "Evita artefactos de Gibbs",
+      "Es más rápido de calcular",
+      "Se puede aplicar sin transformada"
+    ],
+    "answer": "Evita artefactos de Gibbs",
+    "explanation": "Al tener una transición suave, el filtro Gaussiano evita los artefactos causados por discontinuidades bruscas en el dominio frecuencial."
+  },
+  {
+    "question": "¿Cuál es la definición de $G(u,v)$ según el teorema de convolución?",
+    "options": [
+      "$G(u,v) = F(u,v) + H(u,v)$",
+      "$G(u,v) = F(u,v) \\cdot H(u,v)$",
+      "$G(u,v) = F(u,v) / H(u,v)$",
+      "$G(u,v) = F(u,v) - H(u,v)$"
+    ],
+    "answer": "$G(u,v) = F(u,v) \\cdot H(u,v)$",
+    "explanation": "Según el teorema de convolución, $G(u,v) = F(u,v) \\cdot H(u,v)$, donde $F(u,v)$ y $H(u,v)$ son las transformadas de $f(x,y)$ y $h(x,y)$, respectivamente."
+  },
+  {
+    "question": "¿Cuál es la ventaja del filtrado en el dominio frecuencial frente al filtrado espacial?",
+    "options": [
+      "No hay ventaja real",
+      "Es más intuitivo visualizarlo",
+      "Permite mayor control sobre las frecuencias",
+      "No necesita memoria adicional"
+    ],
+    "answer": "Permite mayor control sobre las frecuencias",
+    "explanation": "El filtrado en el dominio frecuencial permite manipular las frecuencias específicas de manera más precisa que en el dominio espacial."
+  }
+]

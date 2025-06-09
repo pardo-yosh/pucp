@@ -1,0 +1,343 @@
+[
+  {
+    "question": "¿Cuál es el propósito principal de insertar un integrador en el camino directo entre el comparador de error y la planta en un servosistema de tipo 1?",
+    "options": [
+      "Aumentar la ganancia del sistema",
+      "Compensar la falta de un integrador en la planta",
+      "Reducir el ruido en la señal de referencia",
+      "Disminuir el tiempo de muestreo"
+    ],
+    "answer": "Compensar la falta de un integrador en la planta",
+    "explanation": "El integrador se inserta para garantizar error en estado estacionario cero ante una entrada escalón, ya que la planta original no contiene integrador."
+  },
+  {
+    "question": "En el diseño del servosistema tipo 1, ¿qué matriz ampliada se forma para incluir la dinámica del integrador?",
+    "options": [
+      "\\[\\hat{A} = \\begin{bmatrix} A & B \\\\ -C & 0 \\end{bmatrix}\\]",
+      "\\[\\hat{A} = \\begin{bmatrix} A & 0 \\\\ -C & 0 \\end{bmatrix}\\]",
+      "\\[\\hat{A} = \\begin{bmatrix} A & 0 \\\\ C & 1 \\end{bmatrix}\\]",
+      "\\[\\hat{A} = \\begin{bmatrix} A & B \\\\ C & D \\end{bmatrix}\\]"
+    ],
+    "answer": "\\[\\hat{A} = \\begin{bmatrix} A & 0 \\\\ -C & 0 \\end{bmatrix}\\]",
+    "explanation": "La matriz ampliada \\[\\hat{A}\\] incluye la dinámica original (A) y la ecuación del error (\\[-C\\]), con ceros para completar las dimensiones."
+  },
+  {
+    "question": "Para un sistema de segundo orden, ¿cómo se relaciona el coeficiente de amortiguamiento (ζ) con la sobreelongación porcentual (M_p)?",
+    "options": [
+      "\\[M_p = e^{-\\zeta \\pi}\\]",
+      "\\[M_p = e^{-\\zeta \\omega_n \\pi}\\]",
+      "\\[M_p = e^{-\\left(\\frac{\\zeta}{\\sqrt{1-\\zeta^2}\\right) \\pi}\\]",
+      "\\[M_p = \\frac{\\zeta}{1-\\zeta^2}\\]"
+    ],
+    "answer": "\\[M_p = e^{-\\left(\\frac{\\zeta}{\\sqrt{1-\\zeta^2}\\right) \\pi}\\]",
+    "explanation": "Esta fórmula muestra la relación exponencial entre ζ y M_p, donde un ζ menor produce mayor sobreelongación."
+  },
+  {
+    "question": "En el método de asignación de polos, ¿qué condición debe cumplir el sistema para garantizar que los polos puedan ubicarse arbitrariamente?",
+    "options": [
+      "Debe ser observable",
+      "Debe ser completamente controlable",
+      "Debe tener ganancia unitaria",
+      "Debe ser estable en lazo abierto"
+    ],
+    "answer": "Debe ser completamente controlable",
+    "explanation": "La controlabilidad completa es necesaria para poder asignar libremente los polos del sistema en lazo cerrado."
+  },
+  {
+    "question": "¿Cuál es la fórmula para calcular el tiempo de asentamiento (t_s) según el criterio del 2% en un sistema de segundo orden?",
+    "options": [
+      "\\[t_s = \\frac{2}{\\zeta \\omega_n}\\]",
+      "\\[t_s = \\frac{4}{\\zeta \\omega_n}\\]",
+      "\\[t_s = \\frac{6}{\\zeta \\omega_n}\\]",
+      "\\[t_s = \\frac{\\pi}{\\omega_n \\sqrt{1-\\zeta^2}}\\]"
+    ],
+    "answer": "\\[t_s = \\frac{4}{\\zeta \\omega_n}\\]",
+    "explanation": "Esta fórmula aproxima el tiempo que tarda la respuesta en permanecer dentro del 2% del valor final."
+  },
+  {
+    "question": "En el diseño del controlador por realimentación de estados, ¿qué representa la matriz K?",
+    "options": [
+      "Ganancias del observador de estado",
+      "Ganancias de realimentación de los estados",
+      "Matriz de compensación del integrador",
+      "Matriz de ponderación del coste"
+    ],
+    "answer": "Ganancias de realimentación de los estados",
+    "explanation": "La matriz K contiene las ganancias que multiplican cada variable de estado en la ley de control \\[u = -Kx\\]."
+  },
+  {
+    "question": "¿Qué ecuación describe la dinámica del error de estimación en un observador de estado?",
+    "options": [
+      "\\[\\dot{e} = (A - BK)e\\]",
+      "\\[\\dot{e} = (A - K_eC)e\\]",
+      "\\[\\dot{e} = (A + BK)e\\]",
+      "\\[\\dot{e} = (A + K_eC)e\\]"
+    ],
+    "answer": "\\[\\dot{e} = (A - K_eC)e\\]",
+    "explanation": "El error de estimación \\[e = x - \\hat{x}\\] converge a cero si \\[A - K_eC\\] es estable."
+  },
+  {
+    "question": "En el problema dual para diseño de observadores, ¿qué operación se realiza sobre las matrices del sistema original?",
+    "options": [
+      "Inversión",
+      "Diagonalización",
+      "Transposición",
+      "Descomposición QR"
+    ],
+    "answer": "Transposición",
+    "explanation": "El problema dual implica usar \\[A^T\\] y \\[C^T\\] para diseñar el observador mediante técnicas de asignación de polos."
+  },
+  {
+    "question": "¿Cómo se calcula la ganancia \\[k_r\\] para garantizar seguimiento perfecto a referencia escalón?",
+    "options": [
+      "\\[k_r = C(A - BK)^{-1}B\\]",
+      "\\[k_r = -1/(C(A - BK)^{-1}B)\\]",
+      "\\[k_r = (A - BK)^{-1}B\\]",
+      "\\[k_r = 1/(CB)\\]"
+    ],
+    "answer": "\\[k_r = -1/(C(A - BK)^{-1}B)\\]",
+    "explanation": "Esta ganancia asegura que la salida en estado estacionario iguale a la referencia para entrada escalón."
+  },
+  {
+    "question": "¿Qué condición debe cumplirse para diseñar un observador de estado de orden completo?",
+    "options": [
+      "Controlabilidad del par (A,B)",
+      "Observabilidad del par (A,C)",
+      "Estabilidad de la matriz A",
+      "No singularidad de la matriz C"
+    ],
+    "answer": "Observabilidad del par (A,C)",
+    "explanation": "La observabilidad garantiza que los estados puedan estimarse a partir de las mediciones de salida."
+  },
+  {
+    "question": "En el sistema masa-resorte-amortiguador, ¿cuál es la representación correcta de la matriz A?",
+    "options": [
+      "\\[\\begin{bmatrix} 0 & 1 \\\\ -\\frac{k}{m} & -\\frac{b}{m} \\end{bmatrix}\\]",
+      "\\[\\begin{bmatrix} 1 & 0 \\\\ -\\frac{b}{m} & -\\frac{k}{m} \\end{bmatrix}\\]",
+      "\\[\\begin{bmatrix} 0 & -\\frac{k}{m} \\\\ 1 & -\\frac{b}{m} \\end{bmatrix}\\]",
+      "\\[\\begin{bmatrix} -\\frac{b}{m} & -\\frac{k}{m} \\\\ 0 & 1 \\end{bmatrix}\\]"
+    ],
+    "answer": "\\[\\begin{bmatrix} 0 & 1 \\\\ -\\frac{k}{m} & -\\frac{b}{m} \\end{bmatrix}\\]",
+    "explanation": "La primera fila representa la relación \\[\\dot{x}_1 = x_2\\] y la segunda la ecuación dinámica \\[\\dot{x}_2 = -\\frac{k}{m}x_1 - \\frac{b}{m}x_2\\]."
+  },
+  {
+    "question": "¿Qué método se utiliza para calcular las ganancias del observador a partir del problema dual?",
+    "options": [
+      "Asignación de polos sobre \\[A - BK\\]",
+      "Asignación de polos sobre \\[A^T - C^TK\\]",
+      "Descomposición en valores singulares",
+      "Minimización de norma H2"
+    ],
+    "answer": "Asignación de polos sobre \\[A^T - C^TK\\]",
+    "explanation": "El problema dual transforma el diseño del observador en un problema de control usando las matrices transpuestas."
+  },
+  {
+    "question": "¿Por qué se introduce un polo no dominante (ej. \\[\\mu_3 = -20\\]) en el diseño del controlador?",
+    "options": [
+      "Para aumentar la ganancia del sistema",
+      "Para hacer el sistema más rápido que el observador",
+      "Para completar el orden del sistema aumentado",
+      "Para reducir el efecto de perturbaciones"
+    ],
+    "answer": "Para completar el orden del sistema aumentado",
+    "explanation": "El sistema aumentado (planta + integrador) es de tercer orden, requiriendo tres polos en el diseño."
+  },
+  {
+    "question": "En la realimentación de estados, ¿cómo se expresa la ley de control?",
+    "options": [
+      "\\[u = Kx\\]",
+      "\\[u = -Kx + k_r r\\]",
+      "\\[u = K_e x\\]",
+      "\\[u = Cx\\]"
+    ],
+    "answer": "\\[u = -Kx + k_r r\\]",
+    "explanation": "La ley combina realimentación de estados (\\[-Kx\\]) y acción directa sobre la referencia (\\[k_r r\\])."
+  },
+  {
+    "question": "¿Qué representa la variable \\[\\xi\\] en el servosistema tipo 1?",
+    "options": [
+      "Error de estimación",
+      "Salida del integrador",
+      "Referencia filtrada",
+      "Estado no medible"
+    ],
+    "answer": "Salida del integrador",
+    "explanation": "\\[\\xi\\] es la integral del error (\\[\\dot{\\xi} = r - y\\]), que se añade como estado adicional para eliminar error en régimen permanente."
+  },
+  {
+    "question": "¿Cómo se verifica la controlabilidad de un sistema lineal?",
+    "options": [
+      "Calculando el rango de \\[C\\]",
+      "Verificando si \\[det(A) \\neq 0\\]",
+      "Calculando el rango de la matriz de controlabilidad \\[M_c = [B \\ AB \\ ... \\ A^{n-1}B]\\]",
+      "Verificando los autovalores de \\[A\\]"
+    ],
+    "answer": "Calculando el rango de la matriz de controlabilidad \\[M_c = [B \\ AB \\ ... \\ A^{n-1}B]\\]",
+    "explanation": "El sistema es controlable si \\[M_c\\] tiene rango completo (igual al número de estados)."
+  },
+  {
+    "question": "¿Cuál es la función de transferencia de la planta en espacio de estados?",
+    "options": [
+      "\\[G_p(s) = C(sI - A)^{-1}B\\]",
+      "\\[G_p(s) = (sI - A)^{-1}B\\]",
+      "\\[G_p(s) = C(sI - A)^{-1}B + D\\]",
+      "\\[G_p(s) = B^T(sI - A)^{-1}C^T\\]"
+    ],
+    "answer": "\\[G_p(s) = C(sI - A)^{-1}B + D\\]",
+    "explanation": "Esta fórmula relaciona la representación en espacio de estados con la función de transferencia."
+  },
+  {
+    "question": "En el observador de estado, ¿cómo deben seleccionarse los polos del observador en comparación con los del controlador?",
+    "options": [
+      "Deben ser iguales",
+      "2-5 veces más rápidos",
+      "10 veces más lentos",
+      "Ubicados en el semiplano derecho"
+    ],
+    "answer": "2-5 veces más rápidos",
+    "explanation": "Los polos del observador deben ser más rápidos para que el error de estimación converja antes que la dinámica del sistema."
+  },
+  {
+    "question": "¿Qué ecuación describe la dinámica del sistema en lazo cerrado con realimentación de estados?",
+    "options": [
+      "\\[\\dot{x} = Ax + Bu\\]",
+      "\\[\\dot{x} = (A - BK)x + Bk_r r\\]",
+      "\\[\\dot{x} = (A + BK)x\\]",
+      "\\[\\dot{x} = A x - K r\\]"
+    ],
+    "answer": "\\[\\dot{x} = (A - BK)x + Bk_r r\\]",
+    "explanation": "La realimentación modifica la matriz dinámica a \\[A - BK\\] y añade el término de referencia \\[Bk_r r\\]."
+  },
+  {
+    "question": "¿Qué método se utiliza para calcular la matriz de ganancia K en el Ejercicio 2?",
+    "options": [
+      "Sustitución directa",
+      "Transformada de Laplace",
+      "Optimización convexa",
+      "Reducción modal"
+    ],
+    "answer": "Sustitución directa",
+    "explanation": "Se igualan los coeficientes del polinomio característico deseado con los de \\[det(sI - (A - BK))\\]."
+  },
+  {
+    "question": "¿Cuál es la principal ventaja de usar realimentación de estados frente a controladores clásicos?",
+    "options": [
+      "Mayor facilidad de implementación",
+      "Posibilidad de asignar polos arbitrariamente",
+      "No requiere modelos matemáticos",
+      "Inmunidad al ruido"
+    ],
+    "answer": "Posibilidad de asignar polos arbitrariamente",
+    "explanation": "La realimentación de estados permite ubicar los polos del sistema en lazo cerrado en posiciones deseadas (si el sistema es controlable)."
+  },
+  {
+    "question": "En el sistema masa-resorte-amortiguador, ¿qué representa el término \\[-kx - b\\dot{x}\\]?",
+    "options": [
+      "Fuerza externa aplicada",
+      "Fuerza del resorte y amortiguador",
+      "Aceleración de la masa",
+      "Error de seguimiento"
+    ],
+    "answer": "Fuerza del resorte y amortiguador",
+    "explanation": "El resorte ejerce fuerza \\[-kx\\] (ley de Hooke) y el amortiguador \\[-b\\dot{x}\\] (proporcional a la velocidad)."
+  },
+  {
+    "question": "¿Qué propiedad garantiza que el error de estimación del observador converja a cero?",
+    "options": [
+      "Controlabilidad de (A,B)",
+      "Estabilidad de A",
+      "Estabilidad de \\[A - K_eC\\]",
+      "No singularidad de B"
+    ],
+    "answer": "Estabilidad de \\[A - K_eC\\]",
+    "explanation": "Los autovalores de \\[A - K_eC\\] deben estar en el semiplano izquierdo para que el error \\[e\\] tienda a cero."
+  },
+  {
+    "question": "¿Cuál es la forma general de la ecuación de estado de un sistema lineal?",
+    "options": [
+      "\\[\\dot{x} = Ax + Bu\\]",
+      "\\[y = Cx + Du\\]",
+      "\\[u = Kx\\]",
+      "\\[\\dot{x} = f(x,u)\\]"
+    ],
+    "answer": "\\[\\dot{x} = Ax + Bu\\]",
+    "explanation": "Ecuación diferencial vectorial que describe la evolución de los estados \\[x\\] en función de las entradas \\[u\\]."
+  },
+  {
+    "question": "¿Qué representa el vector \\[\\hat{R} = [K : -k_I]\\] en el servosistema tipo 1?",
+    "options": [
+      "Ganancias del observador",
+      "Ganancias de realimentación aumentadas",
+      "Matriz de ponderación del coste",
+      "Vector de referencia"
+    ],
+    "answer": "Ganancias de realimentación aumentadas",
+    "explanation": "\\[\\hat{R}\\] contiene las ganancias para los estados originales (\\[K\\]) y para el estado aumentado (\\[-k_I\\])."
+  },
+  {
+    "question": "¿Cómo se calcula la frecuencia natural (\\[\\omega_n\\]) a partir del tiempo de asentamiento (\\[t_s\\]) y ζ?",
+    "options": [
+      "\\[\\omega_n = \\frac{4}{\\zeta t_s}\\]",
+      "\\[\\omega_n = \\frac{t_s}{4\\zeta}\\]",
+      "\\[\\omega_n = \\frac{2\\pi}{t_s}\\]",
+      "\\[\\omega_n = \\sqrt{1 - \\zeta^2}\\]"
+    ],
+    "answer": "\\[\\omega_n = \\frac{4}{\\zeta t_s}\\]",
+    "explanation": "Derivada de la relación \\[t_s \\approx \\frac{4}{\\zeta \\omega_n}\\] para el criterio del 2%."
+  },
+  {
+    "question": "En el Ejercicio 1, ¿por qué se usa \\[\\mu_3 = -20\\] como polo no dominante?",
+    "options": [
+      "Para cancelar un cero en el origen",
+      "Para hacer el sistema críticamente amortiguado",
+      "Para que su dinámica sea mucho más rápida que los polos dominantes",
+      "Para garantizar error cero ante rampas"
+    ],
+    "answer": "Para que su dinámica sea mucho más rápida que los polos dominantes",
+    "explanation": "El polo no dominante se coloca lejos en el semiplano izquierdo para minimizar su impacto en la respuesta transitoria."
+  },
+  {
+    "question": "¿Qué representa la matriz \\[\\phi(A)\\] en el método de asignación de polos?",
+    "options": [
+      "Matriz de observabilidad",
+      "Polinomio característico evaluado en A",
+      "Matriz de transformación modal",
+      "Función de transferencia en espacio de estados"
+    ],
+    "answer": "Polinomio característico evaluado en A",
+    "explanation": "\\[\\phi(A) = A^n + a_1A^{n-1} + \\cdots + a_{n-1}A + a_nI\\], donde \\[a_i\\] son coeficientes del polinomio deseado."
+  },
+  {
+    "question": "¿Cuál es el propósito del término \\[k_I\\] en el control del servosistema tipo 1?",
+    "options": [
+      "Compensar perturbaciones",
+      "Garantizar error cero ante escalón",
+      "Acelerar la respuesta transitoria",
+      "Reducir la sobreelongación"
+    ],
+    "answer": "Garantizar error cero ante escalón",
+    "explanation": "La acción integral (a través de \\[k_I\\]) elimina el error en estado estacionario para entradas escalón."
+  },
+  {
+    "question": "¿Qué información se necesita para diseñar un observador de estado de orden completo?",
+    "options": [
+      "Solo la matriz A",
+      "Las matrices A y B",
+      "Las matrices A y C",
+      "Las matrices A, B y C"
+    ],
+    "answer": "Las matrices A y C",
+    "explanation": "El observador estima estados usando el modelo del sistema (A) y las mediciones de salida (C)."
+  },
+  {
+    "question": "En el sistema masa-resorte-amortiguador, ¿cuál es el valor de la matriz B para m=0.2 kg?",
+    "options": [
+      "\\[\\begin{bmatrix} 0 \\\\ 0.2 \\end{bmatrix}\\]",
+      "\\[\\begin{bmatrix} 0 \\\\ 5 \\end{bmatrix}\\]",
+      "\\[\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\\]",
+      "\\[\\begin{bmatrix} 0.5 \\\\ 0 \\end{bmatrix}\\]"
+    ],
+    "answer": "\\[\\begin{bmatrix} 0 \\\\ 5 \\end{bmatrix}\\]",
+    "explanation": "\\[B = \\begin{bmatrix} 0 \\\\ \\frac{1}{m} \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 5 \\end{bmatrix}\\] cuando \\[m = 0.2\\] kg."
+  }
+]
