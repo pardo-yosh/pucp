@@ -1,0 +1,328 @@
+[
+  {
+    "question": "En el regulador cuadrático lineal (LQR), ¿qué matrices deben ser definidas positivas?",
+    "options": [
+      "Solo $Q$",
+      "Solo $R$",
+      "Tanto $Q$ como $R$",
+      "Ninguna de las anteriores"
+    ],
+    "answer": "Tanto $Q$ como $R$",
+    "explanation": "En el problema LQR, $Q$ (matriz de ponderación del estado) y $R$ (matriz de ponderación del control) deben ser matrices hermíticas definidas positivas o simétricas reales."
+  },
+  {
+    "question": "¿Cuál es la ecuación de Riccati asociada al problema LQR?",
+    "options": [
+      "$A^T P + PA - PBR^{-1}B^T P + Q = 0$",
+      "$PA + A^T P - Q = 0$",
+      "$PBR^{-1}B^T P - Q = 0$",
+      "$A^T P + PA + Q = 0$"
+    ],
+    "answer": "$A^T P + PA - PBR^{-1}B^T P + Q = 0$",
+    "explanation": "La ecuación algebraica de Riccati (ARE) para el problema LQR es $A^T P + PA - PBR^{-1}B^T P + Q = 0$, donde $P$ es la matriz solución simétrica definida positiva."
+  },
+  {
+    "question": "Según la regla de Bryson, ¿cómo se calculan los elementos de la matriz $Q$?",
+    "options": [
+      "$Q_{ii} = \\frac{1}{(\\text{max}(x_i))^2}$",
+      "$Q_{ii} = (\\text{max}(x_i))^2$",
+      "$Q_{ii} = \\text{max}(x_i)$",
+      "$Q_{ii} = \\frac{1}{\\text{max}(x_i)}$"
+    ],
+    "answer": "$Q_{ii} = \\frac{1}{(\\text{max}(x_i))^2}$",
+    "explanation": "La regla de Bryson establece que $Q_{ii} = \\frac{1}{(\\text{max}(x_i))^2}$ donde $\\text{max}(x_i)$ es la desviación máxima aceptable para la variable de estado $x_i$."
+  },
+  {
+    "question": "Para el sistema masa-resorte-amortiguador dado, ¿cuál es la matriz $A$ del espacio de estados?",
+    "options": [
+      "$\\begin{bmatrix} 0 & 1 \\\\ -3.5 & -2.5 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 0 & 1 \\\\ 3.5 & 2.5 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 1 & 0 \\\\ -2.5 & -3.5 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 0 & -1 \\\\ -3.5 & 2.5 \\end{bmatrix}$"
+    ],
+    "answer": "$\\begin{bmatrix} 0 & 1 \\\\ -3.5 & -2.5 \\end{bmatrix}$",
+    "explanation": "Para el sistema dado con $m=0.2kg$, $k=0.7N/m$, $b=0.5kg/s$, la matriz $A$ es $\\begin{bmatrix} 0 & 1 \\\\ -k/m & -b/m \\end{bmatrix} = \\begin{bmatrix} 0 & 1 \\\\ -3.5 & -2.5 \\end{bmatrix}$."
+  },
+  {
+    "question": "¿Cómo se calcula la matriz de ganancia $K$ en el control LQR?",
+    "options": [
+      "$K = R^{-1}B^T P$",
+      "$K = P^{-1}B^T R$",
+      "$K = B^T P R^{-1}$",
+      "$K = P B R^{-1}$"
+    ],
+    "answer": "$K = R^{-1}B^T P$",
+    "explanation": "La matriz de ganancia óptima $K$ en el control LQR se calcula como $K = R^{-1}B^T P$, donde $P$ es la solución de la ecuación de Riccati."
+  },
+  {
+    "question": "En el filtro de Kalman, ¿qué matriz representa la covarianza del ruido del proceso?",
+    "options": ["$Q$", "$R$", "$P$", "$K$"],
+    "answer": "$Q$",
+    "explanation": "En el filtro de Kalman, $Q$ es la matriz de covarianza del ruido del proceso, mientras que $R$ es la matriz de covarianza del ruido de medición."
+  },
+  {
+    "question": "¿Cuál es la ecuación de actualización del estado en el filtro de Kalman?",
+    "options": [
+      "$\\hat{x}_{k|k} = \\hat{x}_{k|k-1} + K_k(z_k - H\\hat{x}_{k|k-1})$",
+      "$\\hat{x}_{k|k} = A\\hat{x}_{k-1|k-1} + Bu_k$",
+      "$\\hat{x}_{k|k} = K_k z_k$",
+      "$\\hat{x}_{k|k} = \\hat{x}_{k|k-1} - K_k H \\hat{x}_{k|k-1}$"
+    ],
+    "answer": "$\\hat{x}_{k|k} = \\hat{x}_{k|k-1} + K_k(z_k - H\\hat{x}_{k|k-1})$",
+    "explanation": "La ecuación de actualización del estado en el filtro de Kalman corrige la predicción ($\\hat{x}_{k|k-1}$) usando la ganancia de Kalman ($K_k$) y la innovación ($z_k - H\\hat{x}_{k|k-1}$)."
+  },
+  {
+    "question": "Para el sistema masa-resorte-amortiguador, ¿cuál es la matriz $B$ del espacio de estados?",
+    "options": [
+      "$\\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 0 \\\\ 5 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 5 \\\\ 0 \\end{bmatrix}$"
+    ],
+    "answer": "$\\begin{bmatrix} 0 \\\\ 5 \\end{bmatrix}$",
+    "explanation": "Para el sistema dado con $m=0.2kg$, la matriz $B$ es $\\begin{bmatrix} 0 \\\\ 1/m \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 5 \\end{bmatrix}$."
+  },
+  {
+    "question": "¿Qué representa la matriz $P$ en la ecuación de Riccati del LQR?",
+    "options": [
+      "La matriz de ganancia del controlador",
+      "La matriz de covarianza del estado",
+      "La matriz solución simétrica definida positiva",
+      "La matriz de observabilidad"
+    ],
+    "answer": "La matriz solución simétrica definida positiva",
+    "explanation": "En la ecuación de Riccati del LQR, $P$ es la matriz solución simétrica definida positiva que se usa para calcular la ganancia óptima $K$."
+  },
+  {
+    "question": "En el contexto del LQR, ¿qué minimiza la función de costo $J$?",
+    "options": [
+      "El error de seguimiento",
+      "La energía del control y las desviaciones del estado",
+      "El tiempo de establecimiento",
+      "El sobreimpulso"
+    ],
+    "answer": "La energía del control y las desviaciones del estado",
+    "explanation": "La función de costo $J = \\int_{0}^{\\infty} (x^TQx + u^TRu) dt$ minimiza una combinación de la energía del control ($u^TRu$) y las desviaciones del estado ($x^TQx$)."
+  },
+  {
+    "question": "¿Cuál es la forma general de la ley de control óptimo en LQR?",
+    "options": [
+      "$u(t) = Kx(t)$",
+      "$u(t) = -Kx(t)$",
+      "$u(t) = K^{-1}x(t)$",
+      "$u(t) = Kx(t)^{-1}$"
+    ],
+    "answer": "$u(t) = -Kx(t)$",
+    "explanation": "La ley de control óptimo en LQR es $u(t) = -Kx(t)$, donde $K$ es la matriz de ganancia calculada a partir de la solución de Riccati."
+  },
+  {
+    "question": "En el filtro de Kalman, ¿qué representa la matriz $R$?",
+    "options": [
+      "Covarianza del ruido del proceso",
+      "Covarianza del ruido de medición",
+      "Matriz de ganancia",
+      "Matriz de transición de estado"
+    ],
+    "answer": "Covarianza del ruido de medición",
+    "explanation": "En el filtro de Kalman, $R$ es la matriz de covarianza del ruido de medición, que cuantifica la incertidumbre en las mediciones del sensor."
+  },
+  {
+    "question": "¿Qué condición deben cumplir las matrices $Q$ y $R$ en el problema LQR?",
+    "options": [
+      "$Q$ debe ser definida positiva y $R$ semidefinida positiva",
+      "$Q$ debe ser semidefinida positiva y $R$ definida positiva",
+      "Ambas deben ser definidas positivas",
+      "Ninguna condición especial"
+    ],
+    "answer": "$Q$ debe ser semidefinida positiva y $R$ definida positiva",
+    "explanation": "En el problema LQR, $Q$ puede ser semidefinida positiva (permitiendo algunos estados no penalizados) pero $R$ debe ser definida positiva para garantizar que el problema esté bien planteado."
+  },
+  {
+    "question": "Para el sistema masa-resorte-amortiguador con $Q = \\begin{bmatrix} 100 & 0 \\\\ 0 & 4 \\end{bmatrix}$ y $R=1$, ¿cuál fue el valor calculado para $p_{11}$ en la matriz $P$?",
+    "options": ["1.8649", "0.556", "27.8705", "9.3245"],
+    "answer": "27.8705",
+    "explanation": "Según la solución mostrada en el documento, la matriz $P$ calculada fue $\\begin{bmatrix} 27.8705 & 1.8649 \\\\ 1.8649 & 0.556 \\end{bmatrix}$, por lo que $p_{11} = 27.8705$."
+  },
+  {
+    "question": "¿Cuál es la ganancia $K$ calculada para el sistema masa-resorte-amortiguador en el ejemplo?",
+    "options": [
+      "$[1.8649 \\quad 0.556]$",
+      "$[27.8705 \\quad 1.8649]$",
+      "$[9.3245 \\quad 2.7802]$",
+      "$[5 \\quad 1]$"
+    ],
+    "answer": "$[9.3245 \\quad 2.7802]$",
+    "explanation": "La solución muestra que $K = R^{-1}B^TP = [9.3245 \\quad 2.7802]$ para el ejemplo dado."
+  },
+  {
+    "question": "En el filtro de Kalman, ¿qué ecuación predice la covarianza del error a priori?",
+    "options": [
+      "$P_{k|k-1} = AP_{k-1|k-1}A^T + Q$",
+      "$P_{k|k} = (I - K_kH)P_{k|k-1}$",
+      "$K_k = P_{k|k-1}H^T(HP_{k|k-1}H^T + R)^{-1}$",
+      "$\\hat{x}_{k|k-1} = A\\hat{x}_{k-1|k-1} + Bu_{k-1}$"
+    ],
+    "answer": "$P_{k|k-1} = AP_{k-1|k-1}A^T + Q$",
+    "explanation": "La predicción de la covarianza del error a priori se calcula como $P_{k|k-1} = AP_{k-1|k-1}A^T + Q$, donde $Q$ es la covarianza del ruido del proceso."
+  },
+  {
+    "question": "¿Qué representa $k_r$ en la solución del ejemplo del sistema masa-resorte-amortiguador?",
+    "options": [
+      "La ganancia del observador",
+      "La ganancia de referencia",
+      "La matriz de ganancia LQR",
+      "La ganancia del filtro de Kalman"
+    ],
+    "answer": "La ganancia de referencia",
+    "explanation": "En el ejemplo, $k_r$ se calcula como $k_r = -\\frac{1}{C(A-BK)^{-1}B} = 10.245$ y representa una ganancia de referencia para el seguimiento de señales."
+  },
+  {
+    "question": "¿Cuál es la ecuación de medida en el modelo de espacio de estados para el filtro de Kalman?",
+    "options": [
+      "$z_k = Hx_k + v_k$",
+      "$x_{k+1} = Ax_k + Bu_k + w_k$",
+      "$\\hat{x}_{k|k} = \\hat{x}_{k|k-1} + K_k(z_k - H\\hat{x}_{k|k-1})$",
+      "$P_{k|k} = (I - K_kH)P_{k|k-1}$"
+    ],
+    "answer": "$z_k = Hx_k + v_k$",
+    "explanation": "La ecuación de medida en el modelo de espacio de estados para el filtro de Kalman es $z_k = Hx_k + v_k$, donde $v_k$ es el ruido de medición con covarianza $R$."
+  },
+  {
+    "question": "En el problema LQR, ¿qué sucede si se aumenta los valores en la matriz $Q$?",
+    "options": [
+      "El controlador será más agresivo",
+      "El control será más suave",
+      "No afecta al sistema",
+      "Solo afecta el tiempo de cálculo"
+    ],
+    "answer": "El controlador será más agresivo",
+    "explanation": "Aumentar los valores en $Q$ (mayor ponderación de los estados) hace que el controlador sea más agresivo en llevar los estados a cero, posiblemente a costa de mayores esfuerzos de control."
+  },
+  {
+    "question": "¿Cuál es el propósito principal del filtro de Kalman?",
+    "options": [
+      "Minimizar una función de costo cuadrática",
+      "Estimar el estado de un sistema dinámico con ruido",
+      "Diseñar un controlador óptimo",
+      "Resolver ecuaciones algebraicas de Riccati"
+    ],
+    "answer": "Estimar el estado de un sistema dinámico con ruido",
+    "explanation": "El filtro de Kalman es un estimador óptimo recursivo que estima el estado de un sistema dinámico a partir de mediciones ruidosas, minimizando el error cuadrático medio."
+  },
+  {
+    "question": "En el ejemplo del sistema masa-resorte-amortiguador, ¿cuál es la matriz $C$ de salida?",
+    "options": [
+      "$\\begin{bmatrix} 0 & 1 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 1 & 0 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 1 & 1 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 0 & 0 \\end{bmatrix}$"
+    ],
+    "answer": "$\\begin{bmatrix} 1 & 0 \\end{bmatrix}$",
+    "explanation": "La matriz $C$ dada en el ejemplo es $\\begin{bmatrix} 1 & 0 \\end{bmatrix}$, lo que significa que la salida $y$ es la posición $x$ (primer estado)."
+  },
+  {
+    "question": "¿Qué método numérico se usa comúnmente para resolver la ecuación de Riccati?",
+    "options": [
+      "Método de Newton-Raphson",
+      "Descomposición LU",
+      "Algoritmo de Kleinman o iteración de matrices",
+      "Método de Euler"
+    ],
+    "answer": "Algoritmo de Kleinman o iteración de matrices",
+    "explanation": "La ecuación algebraica de Riccati se resuelve típicamente usando el algoritmo de Kleinman (un método de iteración de matrices) u otros métodos numéricos especializados para ecuaciones matriciales."
+  },
+  {
+    "question": "En el filtro de Kalman extendido (EKF), ¿qué se linealiza?",
+    "options": [
+      "Solo la ecuación de medida",
+      "Solo la ecuación de estado",
+      "Ambas ecuaciones (estado y medida)",
+      "Nada, el EKF no usa linealización"
+    ],
+    "answer": "Ambas ecuaciones (estado y medida)",
+    "explanation": "El filtro de Kalman extendido (EKF) linealiza tanto la ecuación de estado como la ecuación de medida alrededor de la estimación actual en cada paso de tiempo."
+  },
+  {
+    "question": "¿Qué representa el término $K_k(z_k - H\\hat{x}_{k|k-1})$ en el filtro de Kalman?",
+    "options": [
+      "La predicción del estado",
+      "La innovación o residuo",
+      "La corrección aplicada a la predicción",
+      "La covarianza del error"
+    ],
+    "answer": "La corrección aplicada a la predicción",
+    "explanation": "El término $K_k(z_k - H\\hat{x}_{k|k-1})$ es la corrección aplicada a la predicción a priori, donde $(z_k - H\\hat{x}_{k|k-1})$ es la innovación y $K_k$ es la ganancia de Kalman."
+  },
+  {
+    "question": "En el contexto LQR, ¿qué sucede si $R$ se hace muy grande?",
+    "options": [
+      "El controlador ignora los estados",
+      "El control se vuelve más energético",
+      "El sistema se vuelve inestable",
+      "No tiene efecto en el control"
+    ],
+    "answer": "El controlador ignora los estados",
+    "explanation": "Si $R$ (ponderación del control) se hace muy grande, el controlador prioriza minimizar el esfuerzo de control sobre la regulación de los estados, resultando en un control más débil."
+  },
+  {
+    "question": "¿Cuál es la matriz de transición de estado en el modelo del filtro de Kalman?",
+    "options": ["$A$", "$B$", "$H$", "$K$"],
+    "answer": "$A$",
+    "explanation": "En el modelo del filtro de Kalman, $A$ es la matriz de transición de estado que describe cómo evoluciona el estado de un paso de tiempo al siguiente en ausencia de control o ruido."
+  },
+  {
+    "question": "Para el sistema masa-resorte-amortiguador, si se desea una posición máxima de 0.1m y velocidad máxima de 0.5m/s, ¿cuál sería $Q$ según Bryson?",
+    "options": [
+      "$\\begin{bmatrix} 100 & 0 \\\\ 0 & 4 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 10 & 0 \\\\ 0 & 2 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$",
+      "$\\begin{bmatrix} 0.01 & 0 \\\\ 0 & 0.04 \\end{bmatrix}$"
+    ],
+    "answer": "$\\begin{bmatrix} 100 & 0 \\\\ 0 & 4 \\end{bmatrix}$",
+    "explanation": "Según la regla de Bryson: $Q_{11} = 1/(0.1)^2 = 100$, $Q_{22} = 1/(0.5)^2 = 4$, por lo que $Q = \\begin{bmatrix} 100 & 0 \\\\ 0 & 4 \\end{bmatrix}$."
+  },
+  {
+    "question": "¿Qué propiedad debe tener la matriz $P$ solución de la ecuación de Riccati para garantizar estabilidad?",
+    "options": [
+      "Ser definida positiva",
+      "Ser diagonal",
+      "Tener traza cero",
+      "Ser ortogonal"
+    ],
+    "answer": "Ser definida positiva",
+    "explanation": "La matriz $P$ solución de la ecuación de Riccati debe ser simétrica definida positiva para garantizar que el sistema en lazo cerrado sea estable."
+  },
+  {
+    "question": "En el filtro de Kalman, ¿qué representa $K_k$?",
+    "options": [
+      "La matriz de covarianza del error",
+      "La matriz de transición de estado",
+      "La ganancia de Kalman",
+      "La matriz de observación"
+    ],
+    "answer": "La ganancia de Kalman",
+    "explanation": "$K_k$ es la ganancia de Kalman que determina cuánto peso dar a la innovación (diferencia entre medición real y predicción) al actualizar la estimación del estado."
+  },
+  {
+    "question": "¿Qué ecuación describe la dinámica del sistema en el modelo del filtro de Kalman?",
+    "options": [
+      "$x_{k+1} = Ax_k + Bu_k + w_k$",
+      "$z_k = Hx_k + v_k$",
+      "$\\hat{x}_{k|k} = \\hat{x}_{k|k-1} + K_k(z_k - H\\hat{x}_{k|k-1})$",
+      "$P_{k|k} = (I - K_kH)P_{k|k-1}$"
+    ],
+    "answer": "$x_{k+1} = Ax_k + Bu_k + w_k$",
+    "explanation": "La dinámica del sistema en el modelo del filtro de Kalman está descrita por $x_{k+1} = Ax_k + Bu_k + w_k$, donde $w_k$ es el ruido del proceso con covarianza $Q$."
+  },
+  {
+    "question": "¿Cuál es la principal diferencia entre el filtro de Kalman y el LQR?",
+    "options": [
+      "El LQR es un controlador, el Kalman es un estimador",
+      "El Kalman minimiza una función de costo, el LQR no",
+      "El LQR usa realimentación de salida, el Kalman de estado",
+      "No hay diferencia, son lo mismo"
+    ],
+    "answer": "El LQR es un controlador, el Kalman es un estimador",
+    "explanation": "La principal diferencia es que el LQR es un controlador óptimo que calcula acciones de control, mientras que el filtro de Kalman es un estimador óptimo que calcula estimaciones del estado."
+  }
+]
