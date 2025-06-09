@@ -91,6 +91,12 @@ function checkAnswer(index) {
     btn.id = "next-question";
     btn.innerText = "Siguiente";
     btn.classList.add("dropdown-btn");
+
+    // Agregar estilos para centrar el botón
+    btn.style.display = "block";
+    btn.style.margin = "20px auto";
+    btn.style.textAlign = "center";
+
     btn.onclick = () => {
       currentQuestionIndex++;
       saveProgress();
@@ -101,9 +107,16 @@ function checkAnswer(index) {
         showFinalScore();
       }
     };
-    document.querySelector(".dashboard").appendChild(btn);
+
+    // Crear un contenedor centrado para el botón
+    const buttonContainer = document.createElement("div");
+    buttonContainer.style.textAlign = "center";
+    buttonContainer.style.marginTop = "20px";
+    buttonContainer.appendChild(btn);
+
+    document.querySelector(".dashboard").appendChild(buttonContainer);
   } else {
-    nextButton.style.display = "inline-block";
+    nextButton.style.display = "block";
   }
 
   // Registrar puntaje solo si no ha sido respondido antes
@@ -116,10 +129,10 @@ function checkAnswer(index) {
 function showFinalScore() {
   const container = document.getElementById("quiz-container");
   container.innerHTML = `
-    <div class="dashboard__result">
+    <div class="dashboard__result" style="text-align: center;">
       <h2>🎉 Has terminado el cuestionario</h2>
       <p>Tu puntuación: ${score}/${preguntas.length}</p>
-      <button class="dropdown-btn" onclick="restartQuiz()">Reiniciar</button>
+      <button class="dropdown-btn" onclick="restartQuiz()" style="margin: 20px auto; display: block;">Reiniciar</button>
     </div>
   `;
   localStorage.setItem("quiz-completed", "true");
@@ -146,10 +159,10 @@ function loadProgress() {
   if (completed === "true") {
     const savedScore = localStorage.getItem("quiz-score") || "0";
     document.getElementById("quiz-container").innerHTML = `
-      <div class="dashboard__result">
+      <div class="dashboard__result" style="text-align: center;">
         <h2>👋 Ya completaste este cuestionario</h2>
         <p>Tu último puntaje fue: ${savedScore}/${preguntas.length}</p>
-        <button class="dropdown-btn" onclick="restartQuiz()">Volver a hacer</button>
+        <button class="dropdown-btn" onclick="restartQuiz()" style="margin: 20px auto; display: block;">Volver a hacer</button>
       </div>
     `;
     return true;

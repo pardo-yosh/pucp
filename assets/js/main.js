@@ -47,15 +47,3 @@ function setupCourseLists() {
     });
   });
 }
-
-/*=============== INICIAR TODO ===============*/
-document.addEventListener("DOMContentLoaded", () => {
-  setupSidebar();
-  setupActiveLinks();
-  setupDarkMode();
-  setupCourseLists(); // <-- Añadir esta línea
-
-  // Debug
-  console.log("Estado cargado:", APP_STATE);
-  console.log("Ruta actual:", window.location.pathname);
-});

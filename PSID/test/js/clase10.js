@@ -1,38 +1,68 @@
 let currentQuestionIndex = 0;
 let score = 0;
 let preguntas = [];
+let answeredQuestions = new Set();
+let userAnswers = {};
 
-// Función para renderizar fórmulas LaTeX
+const LATEX_CONFIG = {
+  delimiters: [
+    { left: "$$", right: "$$", display: true },
+    { left: "$", right: "$", display: false },
+    { left: "\\(", right: "\\)", display: false },
+    { left: "\\[", right: "\\]", display: true },
+  ],
+  throwOnError: false,
+};
+
 function renderLatex(element) {
   if (typeof renderMathInElement === "function") {
-    renderMathInElement(element, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true },
-      ],
-      throwOnError: false,
-    });
+    renderMathInElement(element, LATEX_CONFIG);
   }
 }
 
-// Cargar preguntas desde JSONa
 async function loadQuestions() {
   try {
     const response = await fetch("json/clase10.json");
-    if (!response.ok) throw new Error("No se pudo cargar el archivo");
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
     preguntas = await response.json();
-    showQuestion(currentQuestionIndex);
+
+    if (!Array.isArray(preguntas) || preguntas.length === 0) {
+      throw new Error("El archivo no contiene preguntas válidas");
+    }
+
+    if (!loadProgress()) {
+      showQuestion(currentQuestionIndex);
+    }
   } catch (error) {
     console.error("Error al cargar las preguntas:", error);
-    document.getElementById("quiz-container").innerHTML = `
-            <div class="error-message">
-                <p>No se pudieron cargar las preguntas. Por favor, inténtalo de nuevo más tarde.</p>
-            </div>
-        `;
+    showErrorMessage(
+      "No se pudieron cargar las preguntas. Por favor, inténtalo de nuevo más tarde."
+    );
   }
+}
+
+function showErrorMessage(message) {
+  const container = document.getElementById("quiz-container");
+  if (container) {
+    container.innerHTML = `<div class="error-message"><p>${message}</p></div>`;
+  }
+}
+
+function generateOptionsHTML(options, index, userAnswer) {
+  return options
+    .map(
+      (option, i) => `
+    <li class="option-item">
+      <label class="option-label">
+        <input type="radio" name="answer-${index}" value="${option}" class="option-input"
+          ${userAnswer === option ? "checked" : ""}/>
+        <span class="option-text">${option}</span>
+      </label>
+    </li>
+  `
+    )
+    .join("");
 }
 
 function showQuestion(index) {
@@ -40,157 +70,351 @@ function showQuestion(index) {
   if (!container || index >= preguntas.length) return;
 
   const q = preguntas[index];
+  const isLastQuestion = index === preguntas.length - 1;
+  const userAnswer = userAnswers[index]; // Respuesta guardada del usuario
 
-  let html = `
-        <div class="question-card">
-            <div class="question-header">
-                <span class="question-number">Pregunta ${index + 1} de ${
+  container.innerHTML = `
+    <div class="question-card">
+      <div class="question-header">
+        <span class="question-number">Pregunta ${index + 1} de ${
     preguntas.length
   }</span>
-                <span class="question-score">Puntuación: ${score}/${
+        <span class="question-score">Puntuación: ${score}/${
     preguntas.length
   }</span>
-            </div>
-            <div class="question-content">
-                <h3 class="question-text">${q.question}</h3>
-                <ul class="options-list" id="options-${index}">
-    `;
+      </div>
+      <div class="question-content">
+        <h3 class="question-text">${q.question}</h3>
+        <ul class="options-list" id="options-${index}">
+          ${generateOptionsHTML(
+            q.options,
+            index,
+            userAnswer
+          )} <!-- Pasamos la respuesta del usuario -->
+        </ul>
+      </div>
+      <div id="feedback-${index}" class="quiz-feedback"></div>
+      <div id="explanation-${index}" class="quiz-explanation"></div>
+      <div class="button-container" style="${
+        answeredQuestions.has(index) ? "display: flex;" : "display: none;"
+      }">
+        <button id="next-question" class="next-btn">
+          ${isLastQuestion ? "Ver Resultados" : "Siguiente"}
+        </button>
+      </div>
+    </div>
+  `;
 
-  q.options.forEach((option, i) => {
-    html += `
-            <li class="option-item">
-                <label class="option-label">
-                    <input type="radio" name="answer" value="${option}" class="option-input"/>
-                    <span class="option-text">${option}</span>
-                </label>
-            </li>`;
-  });
+  // Si ya había una respuesta seleccionada, marcarla
+  if (userAnswer) {
+    const selectedInput = document.querySelector(
+      `input[value="${userAnswer}"]`
+    );
+    if (selectedInput) {
+      selectedInput.checked = true;
+      // Si ya había respondido, mostrar feedback inmediatamente
+      if (answeredQuestions.has(index)) {
+        checkAnswer(index, true);
+      }
+    }
+  }
 
-  html += `
-                </ul>
-            </div>
-            <div id="feedback-${index}" class="quiz-feedback"></div>
-            <div id="explanation-${index}" class="quiz-explanation"></div>
-        </div>
-    `;
-
-  container.innerHTML = html;
-
-  // Renderizar fórmulas matemáticas
   renderLatex(container);
-
-  // Listener para seleccionar respuesta
-  document.querySelectorAll(`#options-${index} input`).forEach((input) => {
-    input.addEventListener("change", () => {
-      checkAnswer(index);
-    });
-  });
+  attachEventListeners(index);
 }
 
-function checkAnswer(index) {
-  const selected = document.querySelector(`#options-${index} input:checked`);
-  const feedbackDiv = document.getElementById(`feedback-${index}`);
-  const explanationDiv = document.getElementById(`explanation-${index}`);
-  const nextButton = document.getElementById("next-question");
+function attachEventListeners(index) {
+  const inputs = document.querySelectorAll(`#options-${index} input`);
+  inputs.forEach((input) =>
+    input.addEventListener("change", () => checkAnswer(index))
+  );
 
+  document
+    .getElementById("next-question")
+    ?.addEventListener("click", handleNextQuestion);
+}
+
+function handleNextQuestion() {
+  currentQuestionIndex++;
+  saveProgress();
+  currentQuestionIndex < preguntas.length
+    ? showQuestion(currentQuestionIndex)
+    : showFinalScore();
+}
+
+function checkAnswer(index, skipSave = false) {
+  const selected = document.querySelector(`#options-${index} input:checked`);
   if (!selected) return;
 
   const answer = selected.value;
   const correctAnswer = preguntas[index].answer;
   const isCorrect = answer === correctAnswer;
 
-  // Feedback visual
-  feedbackDiv.innerHTML = isCorrect
-    ? '<span style="color: green;">✔️ ¡Correcto!</span>'
-    : '<span style="color: red;">❌ Incorrecto</span>';
+  // Guardar la respuesta del usuario (a menos que skipSave sea true)
+  if (!skipSave) {
+    userAnswers[index] = answer;
+  }
 
-  // Explicación
-  explanationDiv.innerHTML = `<strong>Explicación:</strong> ${preguntas[index].explanation}`;
+  showFeedback(index, isCorrect);
+  showExplanation(index);
+  highlightAnswers(index, answer, correctAnswer); // Nueva función para resaltar ambas respuestas
 
-  // Destacar opción correcta
-  document.querySelectorAll(`#options-${index} label`).forEach((label) => {
-    label.style.backgroundColor = "";
-    if (label.textContent.trim() === correctAnswer) {
-      label.style.backgroundColor = "#d4f8e0"; // Verde suave
+  if (isCorrect && !answeredQuestions.has(index)) {
+    score++;
+    answeredQuestions.add(index);
+    updateScoreDisplay();
+  }
+
+  document.querySelector(".button-container").style.display = "flex";
+  disableOptions(index);
+
+  if (!skipSave) {
+    saveProgress();
+  }
+}
+
+function highlightAnswers(index, userAnswer, correctAnswer) {
+  const labels = document.querySelectorAll(`#options-${index} label`);
+
+  labels.forEach((label) => {
+    const optionText = label.querySelector(".option-text").textContent.trim();
+    label.classList.remove("correct-answer", "wrong-answer");
+
+    if (optionText === correctAnswer) {
+      label.classList.add("correct-answer");
+    } else if (optionText === userAnswer && userAnswer !== correctAnswer) {
+      label.classList.add("wrong-answer");
     }
   });
+}
 
-  // Habilitar botón siguiente
-  if (!nextButton) {
-    const btn = document.createElement("button");
-    btn.id = "next-question";
-    btn.innerText = "Siguiente";
-    btn.classList.add("dropdown-btn");
-    btn.onclick = () => {
-      currentQuestionIndex++;
-      saveProgress();
-      document.getElementById("quiz-container").innerHTML = ""; // Limpiar
-      if (currentQuestionIndex < preguntas.length) {
-        showQuestion(currentQuestionIndex);
-      } else {
-        showFinalScore();
-      }
-    };
-    document.querySelector(".dashboard").appendChild(btn);
-  } else {
-    nextButton.style.display = "inline-block";
-  }
+function showFeedback(index, isCorrect) {
+  const feedbackDiv = document.getElementById(`feedback-${index}`);
+  feedbackDiv.innerHTML = `<span style="color: ${
+    isCorrect ? "green" : "red"
+  }">${isCorrect ? "✔️" : "❌"} ${
+    isCorrect ? "¡Correcto!" : "Incorrecto"
+  }</span>`;
+}
 
-  // Registrar puntaje solo si no ha sido respondido antes
-  if (isCorrect && !localStorage.getItem(`answered-${index}`)) {
-    score++;
-    localStorage.setItem(`answered-${index}`, "correct");
+function showExplanation(index) {
+  const explanationDiv = document.getElementById(`explanation-${index}`);
+  explanationDiv.innerHTML = `<strong>Explicación:</strong> ${preguntas[index].explanation}`;
+  renderLatex(explanationDiv);
+}
+
+function highlightCorrectAnswer(index, correctAnswer) {
+  document.querySelectorAll(`#options-${index} label`).forEach((label) => {
+    if (
+      label.querySelector(".option-text").textContent.trim() === correctAnswer
+    ) {
+      label.style.backgroundColor = "#d4f8e0";
+      label.style.border = "2px solid #4CAF50";
+    }
+  });
+}
+
+function updateScoreDisplay() {
+  const scoreElement = document.querySelector(".question-score");
+  if (scoreElement) {
+    scoreElement.textContent = `Puntuación: ${score}/${preguntas.length}`;
   }
+}
+
+function disableOptions(index) {
+  document
+    .querySelectorAll(`#options-${index} input`)
+    .forEach((input) => (input.disabled = true));
 }
 
 function showFinalScore() {
   const container = document.getElementById("quiz-container");
+  const percentage = Math.round((score / preguntas.length) * 100);
+  let message = "";
+
+  if (percentage >= 90) message = "¡Excelente trabajo! 🌟";
+  else if (percentage >= 70) message = "¡Buen trabajo! 👏";
+  else if (percentage >= 50) message = "Puedes mejorar 💪";
+  else message = "Necesitas practicar más 📚";
+
   container.innerHTML = `
     <div class="dashboard__result">
-      <h2>🎉 Has terminado el cuestionario</h2>
-      <p>Tu puntuación: ${score}/${preguntas.length}</p>
-      <button class="dropdown-btn" onclick="restartQuiz()">Reiniciar</button>
+      <h2>🎉 Quiz Completado</h2>
+      <div class="score-display">
+        <p class="final-score">${score}/${preguntas.length}</p>
+        <p class="percentage">${percentage}%</p>
+        <p class="message">${message}</p>
+      </div>
+      <div class="button-container">
+        <button class="restart-btn" onclick="restartQuiz()">Reiniciar Quiz</button>
+      </div>
     </div>
   `;
-  localStorage.setItem("quiz-completed", "true");
-  localStorage.setItem("quiz-score", score.toString());
+
+  saveCompletion();
 }
 
 function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
-  localStorage.removeItem("quiz-completed");
-  localStorage.removeItem("quiz-score");
-  document.getElementById("quiz-container").innerHTML = "";
-  document.querySelector(".dashboard__result")?.remove();
+  answeredQuestions.clear();
+  clearStorage();
   loadQuestions();
 }
 
 function saveProgress() {
-  localStorage.setItem("question-index", currentQuestionIndex.toString());
-  localStorage.setItem("quiz-score", score.toString());
+  localStorage.setItem(
+    "quiz-progress",
+    JSON.stringify({
+      questionIndex: currentQuestionIndex,
+      score: score,
+      answeredQuestions: Array.from(answeredQuestions),
+      userAnswers: userAnswers, // Guardamos también las respuestas del usuario
+    })
+  );
+}
+
+function saveCompletion() {
+  localStorage.setItem(
+    "quiz-completion",
+    JSON.stringify({
+      completed: true,
+      score: score,
+      total: preguntas.length,
+      date: new Date().toISOString(),
+    })
+  );
 }
 
 function loadProgress() {
-  const completed = localStorage.getItem("quiz-completed");
-  if (completed === "true") {
-    const savedScore = localStorage.getItem("quiz-score") || "0";
-    document.getElementById("quiz-container").innerHTML = `
-      <div class="dashboard__result">
-        <h2>👋 Ya completaste este cuestionario</h2>
-        <p>Tu último puntaje fue: ${savedScore}/${preguntas.length}</p>
-        <button class="dropdown-btn" onclick="restartQuiz()">Volver a hacer</button>
-      </div>
-    `;
+  const completion = localStorage.getItem("quiz-completion");
+  if (completion) {
+    showCompletionMessage(JSON.parse(completion));
     return true;
   }
 
-  const index = localStorage.getItem("question-index");
-  currentQuestionIndex = index ? parseInt(index, 10) : 0;
+  const progress = localStorage.getItem("quiz-progress");
+  if (progress) {
+    const data = JSON.parse(progress);
+    currentQuestionIndex = data.questionIndex || 0;
+    score = data.score || 0;
+    answeredQuestions = new Set(data.answeredQuestions || []);
+    userAnswers = data.userAnswers || {}; // Cargamos las respuestas del usuario
+  }
   return false;
 }
 
-// Inicialización
-document.addEventListener("DOMContentLoaded", () => {
-  loadQuestions();
-});
+function showCompletionMessage(data) {
+  document.getElementById("quiz-container").innerHTML = `
+    <div class="dashboard__result">
+      <h2>👋 Quiz ya completado</h2>
+      <p>Completado el: ${new Date(data.date).toLocaleDateString("es-ES")}</p>
+      <p>Tu puntaje: ${data.score}/${data.total}</p>
+      <div class="button-container">
+        <button class="restart-btn" onclick="restartQuiz()">Hacer de nuevo</button>
+      </div>
+    </div>
+  `;
+}
+
+function clearStorage() {
+  localStorage.removeItem("quiz-progress");
+  localStorage.removeItem("quiz-completion");
+}
+
+document.addEventListener("DOMContentLoaded", loadQuestions);
+
+// CSS optimizado para centrar el botón
+const additionalCSS = `
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.next-btn, .restart-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-btn:hover, .restart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Resto del CSS permanece igual */
+.question-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+}
+
+.option-item {
+  margin: 10px 0;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-label:hover {
+  background-color: #f5f5f5;
+}
+
+.option-input {
+  margin-right: 10px;
+}
+
+.quiz-feedback {
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.quiz-explanation {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.correct-answer {
+  background-color: #d4f8e0 !important;
+  border: 2px solid #4CAF50 !important;
+}
+
+.wrong-answer {
+  background-color: #ffebee !important;
+  border: 2px solid #f44336 !important;
+}
+
+.option-label {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 8px;
+  border: 2px solid transparent;
+}
+`;
+
+if (!document.getElementById("quiz-additional-styles")) {
+  const style = document.createElement("style");
+  style.id = "quiz-additional-styles";
+  style.textContent = additionalCSS;
+  document.head.appendChild(style);
+}
