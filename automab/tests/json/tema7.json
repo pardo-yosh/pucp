@@ -1,0 +1,494 @@
+[
+  {
+    "question": "¿Qué tecnologías avanzadas incorpora la automatización inteligente según el documento?",
+    "options": [
+      "Sensores básicos y control manual",
+      "Inteligencia Artificial (IA) y aprendizaje automático",
+      "Sistemas mecánicos tradicionales",
+      "Redes sociales y marketing digital"
+    ],
+    "answer": "Inteligencia Artificial (IA) y aprendizaje automático",
+    "explanation": "El documento menciona que la automatización inteligente incorpora tecnologías como la IA y el aprendizaje automático para optimizar sistemas industriales."
+  },
+  {
+    "question": "¿Qué ventaja ofrece la automatización inteligente sobre la tradicional?",
+    "options": [
+      "Mayor dependencia de la programación manual",
+      "Incapacidad de adaptarse a cambios",
+      "Aprendizaje basado en datos para optimizar desempeño",
+      "Requiere supervisión constante sin beneficios adicionales"
+    ],
+    "answer": "Aprendizaje basado en datos para optimizar desempeño",
+    "explanation": "La automatización inteligente aprende de datos históricos y en tiempo real para adaptarse y mejorar, a diferencia de los sistemas tradicionales."
+  },
+  {
+    "question": "¿Qué tipo de algoritmo NO se menciona como parte del aprendizaje automático en el documento?",
+    "options": [
+      "Redes neuronales",
+      "Árboles de decisión",
+      "Aprendizaje profundo (deep learning)",
+      "Algoritmos genéticos"
+    ],
+    "answer": "Algoritmos genéticos",
+    "explanation": "El documento menciona redes neuronales, árboles de decisión y aprendizaje profundo, pero no algoritmos genéticos."
+  },
+  {
+    "question": "¿Para qué se utiliza el Procesamiento de Lenguaje Natural (NLP) en automatización industrial?",
+    "options": [
+      "Control de temperatura en hornos industriales",
+      "Chatbots y asistentes virtuales",
+      "Monitoreo de vibraciones en maquinaria",
+      "Inspección visual de productos"
+    ],
+    "answer": "Chatbots y asistentes virtuales",
+    "explanation": "El NLP permite a las máquinas entender y generar lenguaje humano, aplicándose en chatbots y asistentes virtuales."
+  },
+  {
+    "question": "En el caso de mantenimiento predictivo, ¿qué datos recopilan los sensores?",
+    "options": [
+      "Color y textura de los productos",
+      "Vibración, temperatura y ruido",
+      "Opiniones de clientes",
+      "Precios de mercado"
+    ],
+    "answer": "Vibración, temperatura y ruido",
+    "explanation": "Los sensores en mantenimiento predictivo monitorean variables como vibración, temperatura y ruido para anticipar fallos."
+  },
+  {
+    "question": "¿Qué beneficio principal ofrece el mantenimiento predictivo?",
+    "options": [
+      "Aumenta los costos de operación",
+      "Reduce tiempos de inactividad no planificados",
+      "Elimina completamente la necesidad de mantenimiento",
+      "Requiere menos datos para su funcionamiento"
+    ],
+    "answer": "Reduce tiempos de inactividad no planificados",
+    "explanation": "El mantenimiento predictivo anticipa fallos, permitiendo intervenciones a tiempo y reduciendo paradas no planificadas."
+  },
+  {
+    "question": "¿Qué tipo de sensor se utiliza para medir distancia o verificar ensamblajes?",
+    "options": [
+      "Sensores infrarrojos",
+      "Sensores ópticos",
+      "Sensores de humedad",
+      "Sensores de presión"
+    ],
+    "answer": "Sensores ópticos",
+    "explanation": "Los sensores ópticos detectan cambios en la luz para medir distancia o verificar ensamblajes en líneas de producción."
+  },
+  {
+    "question": "¿Qué protocolo NO se menciona para conectar sensores a sistemas SCADA o PLC?",
+    "options": ["PROFINET", "Ethernet/IP", "OPC UA", "HTTP"],
+    "answer": "HTTP",
+    "explanation": "El documento menciona PROFINET, Ethernet/IP y OPC UA como protocolos de conexión, pero no HTTP."
+  },
+  {
+    "question": "¿Cuál es el flujo correcto de datos en un sistema de automatización inteligente?",
+    "options": [
+      "Análisis → Captura → Transmisión → Acción",
+      "Captura → Transmisión → Análisis → Acción",
+      "Transmisión → Acción → Captura → Análisis",
+      "Acción → Análisis → Transmisión → Captura"
+    ],
+    "answer": "Captura → Transmisión → Análisis → Acción",
+    "explanation": "El documento describe el flujo como: sensores capturan datos, se transmiten a sistemas centrales, se analizan con IA y luego se actúa."
+  },
+  {
+    "question": "¿Qué desafío ético se menciona respecto a la IA en automatización?",
+    "options": [
+      "Falta de colores en las interfaces",
+      "Privacidad de datos y seguridad",
+      "Demasiada intervención humana",
+      "Bajo costo de implementación"
+    ],
+    "answer": "Privacidad de datos y seguridad",
+    "explanation": "Uno de los principales desafíos éticos es proteger datos sensibles y garantizar seguridad contra ciberataques."
+  },
+  {
+    "question": "¿Qué normativa europea se menciona para protección de datos?",
+    "options": [
+      "ISO 9001",
+      "GDPR (General Data Protection Regulation)",
+      "IEEE 802.11",
+      "OSHA"
+    ],
+    "answer": "GDPR (General Data Protection Regulation)",
+    "explanation": "El documento menciona el GDPR como normativa europea para protección de datos en implementaciones de IA."
+  },
+  {
+    "question": "¿Qué organismo desarrolla normas para seguridad en IA y automatización?",
+    "options": ["UNICEF", "ISO e IEC", "NASA", "FIFA"],
+    "answer": "ISO e IEC",
+    "explanation": "Organismos como ISO e IEC desarrollan normativas para seguridad y confiabilidad en sistemas de IA."
+  },
+  {
+    "question": "¿Cuál es la primera etapa en la implementación de tecnologías inteligentes?",
+    "options": [
+      "Instalación",
+      "Planificación",
+      "Monitoreo",
+      "Ajuste y optimización"
+    ],
+    "answer": "Planificación",
+    "explanation": "La primera etapa es planificación, donde se evalúan necesidades y se seleccionan tecnologías."
+  },
+  {
+    "question": "¿Qué factor crítico se menciona para la adopción exitosa de IA?",
+    "options": [
+      "Uso exclusivo de sistemas antiguos",
+      "Evitar la capacitación del personal",
+      "Integración de sistemas compatibles",
+      "Minimizar la recolección de datos"
+    ],
+    "answer": "Integración de sistemas compatibles",
+    "explanation": "Es crítico asegurar que sensores, PLCs, SCADA y sistemas de IA sean compatibles y trabajen en conjunto."
+  },
+  {
+    "question": "En el caso de control de calidad con visión artificial, ¿qué se instala primero?",
+    "options": [
+      "Sensores de temperatura",
+      "Cámaras de visión artificial",
+      "Sistemas de audio",
+      "Redes neuronales en la nube"
+    ],
+    "answer": "Cámaras de visión artificial",
+    "explanation": "El primer paso es instalar cámaras para inspección visual antes de configurar el sistema de IA."
+  },
+  {
+    "question": "¿Qué tendencia futura se menciona en las conclusiones?",
+    "options": [
+      "Retorno a sistemas manuales",
+      "IA combinada con IIoT (Industrial Internet of Things)",
+      "Eliminación de todos los sensores",
+      "Reducción del uso de datos"
+    ],
+    "answer": "IA combinada con IIoT (Industrial Internet of Things)",
+    "explanation": "El documento menciona la combinación de IA con IIoT como una tendencia futura importante."
+  },
+  {
+    "question": "¿Qué impacto tiene la automatización inteligente en el empleo según el documento?",
+    "options": [
+      "Elimina todos los puestos de trabajo",
+      "Transforma roles requiriendo habilidades técnicas avanzadas",
+      "Reduce la necesidad de capacitación",
+      "No tiene ningún impacto"
+    ],
+    "answer": "Transforma roles requiriendo habilidades técnicas avanzadas",
+    "explanation": "La automatización transforma los roles laborales, aumentando la demanda de habilidades técnicas y análisis de datos."
+  },
+  {
+    "question": "¿Cómo contribuyen IA y sensores a la sostenibilidad industrial?",
+    "options": [
+      "Aumentando el consumo energético",
+      "Reduciendo desperdicios mediante optimización",
+      "Eliminando todos los procesos manuales",
+      "Ignorando el impacto ambiental"
+    ],
+    "answer": "Reduciendo desperdicios mediante optimización",
+    "explanation": "Monitoreo en tiempo real y mantenimiento predictivo ayudan a optimizar recursos y reducir desperdicios."
+  },
+  {
+    "question": "¿Qué tipo de robot se menciona que puede realizar tareas peligrosas?",
+    "options": [
+      "Robots de entretenimiento",
+      "Robots autónomos combinados con IA",
+      "Robots desechables",
+      "Robots sin sensores"
+    ],
+    "answer": "Robots autónomos combinados con IA",
+    "explanation": "La robótica con IA permite crear robots autónomos que realizan tareas peligrosas o repetitivas."
+  },
+  {
+    "question": "¿Qué sistema imita el conocimiento de expertos humanos?",
+    "options": [
+      "Sistemas expertos",
+      "Redes sociales",
+      "Hojas de cálculo",
+      "Bases de datos relacionales"
+    ],
+    "answer": "Sistemas expertos",
+    "explanation": "Los sistemas expertos son programas que imitan el conocimiento y toma de decisiones de expertos en un campo."
+  },
+  {
+    "question": "¿Qué tipo de aprendizaje permite a las máquinas mejorar con la experiencia?",
+    "options": [
+      "Aprendizaje manual",
+      "Aprendizaje automático (Machine Learning)",
+      "Aprendizaje por repetición",
+      "Aprendizaje sin datos"
+    ],
+    "answer": "Aprendizaje automático (Machine Learning)",
+    "explanation": "El aprendizaje automático permite a las máquinas mejorar su rendimiento con la experiencia basada en datos."
+  },
+  {
+    "question": "¿Qué aplicación industrial tiene la visión artificial?",
+    "options": [
+      "Control de calidad en manufactura",
+      "Generación de informes financieros",
+      "Diseño de ropa",
+      "Composición musical"
+    ],
+    "answer": "Control de calidad en manufactura",
+    "explanation": "La visión artificial se usa en aplicaciones como reconocimiento facial y control de calidad en manufactura."
+  },
+  {
+    "question": "¿Qué característica define a los sensores avanzados en IA?",
+    "options": [
+      "Recopilan datos irrelevantes",
+      "Procesan información sin transmitirla",
+      "Proporcionan datos en tiempo real",
+      "Funcionan sin conexión a sistemas"
+    ],
+    "answer": "Proporcionan datos en tiempo real",
+    "explanation": "Los sensores avanzados recopilan y transmiten datos en tiempo real para análisis inmediato por sistemas de IA."
+  },
+  {
+    "question": "¿Qué problema puede detectar IA al monitorear vibraciones en motores?",
+    "options": [
+      "Falta de personal",
+      "Problemas de diseño del producto",
+      "Desgaste o fallo inminente",
+      "Errores en documentos"
+    ],
+    "answer": "Desgaste o fallo inminente",
+    "explanation": "Patrones anómalos en vibraciones pueden indicar desgaste o fallos próximos, detectables por IA."
+  },
+  {
+    "question": "¿Qué se necesita para que el análisis de datos sea confiable?",
+    "options": [
+      "Datos sin filtrar ni limpiar",
+      "Valores atípicos sin procesar",
+      "Organización y limpieza de datos",
+      "Uso exclusivo de datos antiguos"
+    ],
+    "answer": "Organización y limpieza de datos",
+    "explanation": "El documento enfatiza la necesidad de filtrar, limpiar y organizar datos para análisis confiables."
+  },
+  {
+    "question": "¿Qué tecnología permite procesar datos cerca de su fuente?",
+    "options": [
+      "Edge computing",
+      "Blockchain",
+      "Realidad virtual",
+      "Streaming de video"
+    ],
+    "answer": "Edge computing",
+    "explanation": "Edge computing procesa datos cerca de su fuente (como sensores) en lugar de enviarlos a la nube."
+  },
+  {
+    "question": "¿Qué ejemplo se da de uso de sensores en manufactura de alimentos?",
+    "options": [
+      "Monitoreo de temperatura y humedad",
+      "Control de precios de venta",
+      "Diseño de empaques",
+      "Encuestas a clientes"
+    ],
+    "answer": "Monitoreo de temperatura y humedad",
+    "explanation": "Sensores en plantas de alimentos monitorean temperatura y humedad para asegurar calidad."
+  },
+  {
+    "question": "¿Qué tipo de sensor detecta objetos sin contacto físico?",
+    "options": [
+      "Sensores de proximidad",
+      "Sensores de humedad",
+      "Sensores de peso",
+      "Sensores de sonido"
+    ],
+    "answer": "Sensores de proximidad",
+    "explanation": "Los sensores de proximidad detectan presencia de objetos cercanos sin contacto físico."
+  },
+  {
+    "question": "¿Qué habilidad será esencial en entornos automatizados según el documento?",
+    "options": [
+      "Análisis de datos e interpretación de IA",
+      "Mecánica de bicicletas",
+      "Dibujo artístico",
+      "Canto profesional"
+    ],
+    "answer": "Análisis de datos e interpretación de IA",
+    "explanation": "Los profesionales necesitarán habilidades en análisis de datos y comprensión de sistemas de IA."
+  },
+  {
+    "question": "¿Qué beneficio ofrece la toma de decisiones en tiempo real?",
+    "options": [
+      "Aumenta el tiempo de inactividad",
+      "Minimiza el tiempo de inactividad",
+      "Ignora los datos actuales",
+      "Retrasa las acciones correctivas"
+    ],
+    "answer": "Minimiza el tiempo de inactividad",
+    "explanation": "Decisiones en tiempo real permiten ajustar procesos inmediatamente, minimizando paradas no planificadas."
+  },
+  {
+    "question": "¿Qué componente NO es parte típica de un sistema de automatización inteligente?",
+    "options": [
+      "Sensores avanzados",
+      "Sistemas SCADA",
+      "Algoritmos de IA",
+      "Herramientas de jardinería"
+    ],
+    "answer": "Herramientas de jardinería",
+    "explanation": "Sensores, SCADA y algoritmos de IA son componentes clave, mientras herramientas de jardinería no son relevantes."
+  },
+  {
+    "question": "¿Qué tipo de mantenimiento evita fallos antes de que ocurran?",
+    "options": [
+      "Mantenimiento correctivo",
+      "Mantenimiento predictivo",
+      "Mantenimiento reactivo",
+      "Mantenimiento aleatorio"
+    ],
+    "answer": "Mantenimiento predictivo",
+    "explanation": "El mantenimiento predictivo usa datos y IA para anticipar y prevenir fallos antes de que ocurran."
+  },
+  {
+    "question": "¿Qué se monitorea en motores para mantenimiento predictivo?",
+    "options": [
+      "Vibración y temperatura",
+      "Color y olor",
+      "Precio de mercado",
+      "Opiniones de usuarios"
+    ],
+    "answer": "Vibración y temperatura",
+    "explanation": "Vibración y temperatura son variables clave monitoreadas para predecir fallos en motores."
+  },
+  {
+    "question": "¿Qué rol juegan los sensores en la IA industrial?",
+    "options": [
+      "Decorar equipos",
+      "Recopilar datos clave para algoritmos de IA",
+      "Reemplazar completamente a los humanos",
+      "Generar facturas"
+    ],
+    "answer": "Recopilar datos clave para algoritmos de IA",
+    "explanation": "Sensores recopilan datos que alimentan algoritmos de IA para optimizar procesos industriales."
+  },
+  {
+    "question": "¿Qué tecnología se combina con robótica para crear sistemas autónomos?",
+    "options": ["IA", "Impresión 3D", "Realidad aumentada", "Bases de datos"],
+    "answer": "IA",
+    "explanation": "La IA se combina con robótica para crear robots autónomos que adaptan su comportamiento."
+  },
+  {
+    "question": "¿Qué problema ético plantea la toma de decisiones autónoma?",
+    "options": [
+      "Falta de responsabilidad clara en fallos",
+      "Exceso de intervención humana",
+      "Demasiada transparencia",
+      "Costos demasiado bajos"
+    ],
+    "answer": "Falta de responsabilidad clara en fallos",
+    "explanation": "La autonomía en IA plantea dilemas sobre quién asume responsabilidad cuando ocurren fallos o accidentes."
+  },
+  {
+    "question": "¿Qué norma menciona el documento sobre protección de datos?",
+    "options": ["GDPR", "ISO 14000", "IEEE 754", "OSHA 1910"],
+    "answer": "GDPR",
+    "explanation": "El GDPR (Reglamento General de Protección de Datos) se menciona como normativa clave para protección de datos."
+  },
+  {
+    "question": "¿Qué etapa sigue a la instalación en implementación de IA?",
+    "options": [
+      "Planificación",
+      "Monitoreo",
+      "Ignorar el sistema",
+      "Venta del equipo"
+    ],
+    "answer": "Monitoreo",
+    "explanation": "Después de instalar equipos y sensores, se monitorea el sistema para ajustar parámetros."
+  },
+  {
+    "question": "¿Qué se requiere para la integración exitosa de sistemas de automatización?",
+    "options": [
+      "Incompatibilidad entre componentes",
+      "Falta de capacitación",
+      "Compatibilidad entre sensores, PLCs y SCADA",
+      "Evitar el uso de datos"
+    ],
+    "answer": "Compatibilidad entre sensores, PLCs y SCADA",
+    "explanation": "La integración exitosa requiere que todos los componentes sean compatibles y trabajen en conjunto."
+  },
+  {
+    "question": "¿Qué ejemplo de aplicación industrial se da para visión artificial?",
+    "options": [
+      "Diagnóstico médico por imágenes",
+      "Control de calidad en manufactura",
+      "Traducción de idiomas",
+      "Generación de música"
+    ],
+    "answer": "Control de calidad en manufactura",
+    "explanation": "La visión artificial se aplica en control de calidad para inspeccionar productos en manufactura."
+  },
+  {
+    "question": "¿Qué habilidad es crucial para trabajadores en entornos automatizados?",
+    "options": [
+      "Interpretar datos de sistemas de IA",
+      "Cultivar plantas",
+      "Conducir vehículos antiguos",
+      "Escribir novelas"
+    ],
+    "answer": "Interpretar datos de sistemas de IA",
+    "explanation": "Los trabajadores necesitan habilidades para interpretar datos generados por sistemas automatizados."
+  },
+  {
+    "question": "¿Qué ventaja tiene el edge computing en automatización?",
+    "options": [
+      "Procesa datos lejos de su fuente",
+      "Retrasa el análisis de datos",
+      "Procesa datos cerca de sensores para rapidez",
+      "Aumenta el consumo energético"
+    ],
+    "answer": "Procesa datos cerca de sensores para rapidez",
+    "explanation": "Edge computing permite procesar datos cerca de sensores, reduciendo latencia y mejorando eficiencia."
+  },
+  {
+    "question": "¿Qué tipo de datos son irrelevantes para mantenimiento predictivo?",
+    "options": [
+      "Vibración de máquinas",
+      "Temperatura de equipos",
+      "Opiniones políticas",
+      "Niveles de ruido"
+    ],
+    "answer": "Opiniones políticas",
+    "explanation": "Opiniones políticas no son datos relevantes para predecir fallos en equipos industriales."
+  },
+  {
+    "question": "¿Qué característica define a la automatización inteligente?",
+    "options": [
+      "Inflexibilidad ante cambios",
+      "Incapacidad de aprender",
+      "Adaptabilidad basada en datos",
+      "Dependencia exclusiva de programación fija"
+    ],
+    "answer": "Adaptabilidad basada en datos",
+    "explanation": "La automatización inteligente se adapta y optimiza continuamente basándose en análisis de datos."
+  },
+  {
+    "question": "¿Qué sistema se menciona para control industrial junto con PLC?",
+    "options": [
+      "SCADA",
+      "Redes sociales",
+      "Videojuegos",
+      "Aplicaciones de citas"
+    ],
+    "answer": "SCADA",
+    "explanation": "SCADA se menciona como sistema de control industrial que trabaja junto con PLCs en automatización."
+  },
+  {
+    "question": "¿Qué tipo de red se menciona como tendencia futura?",
+    "options": ["Redes 3G", "Redes 5G", "Redes análogas", "Redes de radio AM"],
+    "answer": "Redes 5G",
+    "explanation": "El documento menciona avances en redes 5G como parte de las tendencias futuras en automatización."
+  },
+  {
+    "question": "¿Qué aspecto de sostenibilidad mejora la IA industrial?",
+    "options": [
+      "Aumenta el desperdicio de materiales",
+      "Reduce la huella de carbono",
+      "Ignora el consumo energético",
+      "Promueve el uso de combustibles fósiles"
+    ],
+    "answer": "Reduce la huella de carbono",
+    "explanation": "IA y sensores optimizan recursos, reduciendo desperdicios y huella de carbono en procesos industriales."
+  }
+]
